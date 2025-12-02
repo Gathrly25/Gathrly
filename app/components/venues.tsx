@@ -2,37 +2,47 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowRight, MapPin, Users, X } from "lucide-react";
+import { useRouter } from "next/navigation";
 import { cn } from "../lib/utils";
+import Image from "next/image";
 
 const venues = [
   {
     id: 1,
-    name: "The Grand Ballroom",
-    location: "Downtown Chicago",
+    slug: "lofte-23",
+    name: "Lofte 23",
+    location: "Downtown Arts District",
     capacity: "500 Guests",
-    image: "https://images.unsplash.com/photo-1519167758481-83f550bb49b3?q=80&w=2098&auto=format&fit=crop",
-    description: "A timeless space with crystal chandeliers and soaring ceilings, perfect for elegant galas and weddings.",
+    image: "https://res.cloudinary.com/dygfdmuri/image/upload/v1764709376/l7_sins5m.webp",
+    description: "A raw, industrial masterpiece featuring exposed brick, soaring timber beams, and panoramic city views. The perfect canvas for bold, modern events.",
   },
   {
     id: 2,
-    name: "Skyline Loft",
-    location: "West Loop",
+    slug: "velvet-hour",
+    name: "Velvet Hour",
+    location: "West Loop Rooftop",
     capacity: "250 Guests",
-    image: "https://images.unsplash.com/photo-1519225421980-715cb0202128?q=80&w=2100&auto=format&fit=crop",
-    description: "Industrial chic meets modern luxury. Floor-to-ceiling windows offer breathtaking views of the city skyline.",
+    image: "/images/vh-images/vv1.jpg",
+    description: "An ultra-chic rooftop lounge oozing sophistication. Floor-to-ceiling glass, plush velvet interiors, and a sunset view that steals the show.",
   },
   {
     id: 3,
-    name: "The Garden Atrium",
-    location: "Lincoln Park",
+    slug: "billionaire-row",
+    name: "Billionaire Row",
+    location: "Gold Coast Mansion",
     capacity: "150 Guests",
-    image: "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?q=80&w=2079&auto=format&fit=crop",
-    description: "An intimate, light-filled sanctuary surrounded by lush greenery. Ideal for ceremonies and cocktail hours.",
+    image: "/images/br-images/br1.JPEG",
+    description: "Opulence redefined. A historic mansion with manicured gardens, marble ballrooms, and an air of exclusivity that impresses every guest.",
   },
 ];
 
 export const VenuesShowcase = () => {
   const [selectedId, setSelectedId] = useState<number | null>(null);
+  const router = useRouter();
+
+  const handleBookNow = (slug: string) => {
+    router.push(`/venues/${slug}`);
+  };
 
   return (
     <section className="relative min-h-screen bg-stone-100 py-24 text-stone-900">
@@ -43,7 +53,7 @@ export const VenuesShowcase = () => {
               Our Spaces
             </h2>
             <h3 className="mt-4 text-5xl font-bold leading-tight md:text-7xl">
-              Curated Venues
+              Iconic Venues
             </h3>
           </div>
           <p className="max-w-md text-lg text-stone-600">
@@ -54,40 +64,22 @@ export const VenuesShowcase = () => {
 
         <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
           {venues.map((venue) => (
-            <motion.div
+            <div
               key={venue.id}
-              layoutId={`card-${venue.id}`}
+              // layoutId={`card-${venue.id}`}
               onClick={() => setSelectedId(venue.id)}
-              className="group relative aspect-[3/4] cursor-pointer overflow-hidden rounded-2xl bg-stone-200"
+              className="group relative aspect-[3/4] cursor-pointer overflow-hidden rounded-2xl bg-stone-200 shadow-lg hover:shadow-xl transition-shadow"
             >
-              <motion.img
-                layoutId={`image-${venue.id}`}
+              <Image
+                // layoutId={`image-${venue.id}`}
                 src={venue.image}
                 alt={venue.name}
+                width={100}
+                height={100}
                 className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-60 transition-opacity duration-300 group-hover:opacity-80" />
+            </div>
 
-              <div className="absolute bottom-0 left-0 w-full p-8 text-white">
-                <motion.h4
-                  layoutId={`title-${venue.id}`}
-                  className="text-2xl font-bold md:text-3xl"
-                >
-                  {venue.name}
-                </motion.h4>
-                <motion.div
-                  layoutId={`meta-${venue.id}`}
-                  className="mt-2 flex items-center gap-4 text-sm opacity-80"
-                >
-                  <span className="flex items-center gap-1">
-                    <MapPin className="h-4 w-4" /> {venue.location}
-                  </span>
-                  <span className="flex items-center gap-1">
-                    <Users className="h-4 w-4" /> {venue.capacity}
-                  </span>
-                </motion.div>
-              </div>
-            </motion.div>
           ))}
         </div>
       </div>
@@ -133,14 +125,14 @@ export const VenuesShowcase = () => {
                   </motion.h2>
                   <motion.div
                     layoutId={`meta-${selectedId}`}
-                    className="mt-4 flex gap-6 text-stone-500"
+                    className="mt-4 flex flex-col gap-3 text-stone-500"
                   >
                     <span className="flex items-center gap-2">
-                      <MapPin className="h-5 w-5" />
+                      <MapPin className="h-5 w-5 text-amber-600" />
                       {venues.find((v) => v.id === selectedId)?.location}
                     </span>
                     <span className="flex items-center gap-2">
-                      <Users className="h-5 w-5" />
+                      <Users className="h-5 w-5 text-amber-600" />
                       {venues.find((v) => v.id === selectedId)?.capacity}
                     </span>
                   </motion.div>
@@ -157,9 +149,13 @@ export const VenuesShowcase = () => {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.3 }}
+                    onClick={() => {
+                      const slug = venues.find((v) => v.id === selectedId)?.slug;
+                      if (slug) handleBookNow(slug);
+                    }}
                     className="mt-10 flex w-fit items-center gap-2 rounded-full bg-black px-8 py-4 text-white transition-transform hover:scale-105 active:scale-95"
                   >
-                    Book This Venue <ArrowRight className="h-4 w-4" />
+                    Explore Venue <ArrowRight className="h-4 w-4" />
                   </motion.button>
                 </div>
               </div>

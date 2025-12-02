@@ -1,101 +1,113 @@
 "use client";
-import React, { useRef } from "react";
-import {
-    motion,
-    useMotionTemplate,
-    useMotionValue,
-    useSpring,
-    useTransform,
-} from "framer-motion";
+import React from "react";
+import { motion } from "framer-motion";
 import { cn } from "../lib/utils";
-import { Sparkles, Utensils, Music, Camera, Wine, Flower2 } from "lucide-react";
+import {
+    Sparkles,
+    Utensils,
+    Music,
+    Camera,
+    Wine,
+    Flower2,
+    ArrowRight,
+} from "lucide-react";
 
 const services = [
     {
         title: "Decor & Styling",
-        description: "From balloon arches to floral masterpieces, we transform spaces.",
+        description: "Bespoke floral arrangements and immersive thematic styling.",
         icon: Flower2,
         className: "md:col-span-2 md:row-span-2",
-        image: "https://images.unsplash.com/photo-1530103862676-de3c9da59af7?q=80&w=2000&auto=format&fit=crop",
+        image:
+            "https://images.unsplash.com/photo-1530103862676-de3c9da59af7?q=80&w=2000&auto=format&fit=crop",
+        color: "from-pink-500/20 to-purple-500/20",
     },
     {
-        title: "Catering Coordination",
-        description: "Partnering with top-tier chefs for exquisite dining.",
+        title: "Culinary Excellence",
+        description: "Michelin-star inspired menus tailored to your palate.",
         icon: Utensils,
         className: "md:col-span-1 md:row-span-1",
-        image: "https://images.unsplash.com/photo-1555244162-803834f70033?q=80&w=2000&auto=format&fit=crop",
+        image:
+            "https://images.unsplash.com/photo-1555244162-803834f70033?q=80&w=2000&auto=format&fit=crop",
+        color: "from-orange-500/20 to-red-500/20",
     },
     {
-        title: "Bar Services",
-        description: "Craft cocktails and premium wine selections.",
+        title: "Premium Bar",
+        description: "Signature cocktails and rare vintage wine collections.",
         icon: Wine,
         className: "md:col-span-1 md:row-span-1",
-        image: "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?q=80&w=2000&auto=format&fit=crop",
+        image:
+            "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?q=80&w=2000&auto=format&fit=crop",
+        color: "from-amber-500/20 to-yellow-500/20",
     },
     {
-        title: "Entertainment",
-        description: "DJs, live bands, and performers to keep the vibe alive.",
+        title: "Live Entertainment",
+        description: "Curated lineup of world-class DJs, bands, and performers.",
         icon: Music,
         className: "md:col-span-1 md:row-span-2",
-        image: "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?q=80&w=2000&auto=format&fit=crop",
+        image:
+            "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?q=80&w=2000&auto=format&fit=crop",
+        color: "from-blue-500/20 to-cyan-500/20",
     },
     {
-        title: "Photography",
-        description: "Capture every moment with our professional partners.",
+        title: "Cinematography",
+        description: "Capturing your moments with cinematic precision.",
         icon: Camera,
         className: "md:col-span-2 md:row-span-1",
-        image: "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?q=80&w=2000&auto=format&fit=crop",
+        image:
+            "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?q=80&w=2000&auto=format&fit=crop",
+        color: "from-emerald-500/20 to-teal-500/20",
     },
 ];
 
 export const ServicesSection = () => {
     return (
-        <section className="bg-stone-950 py-24 text-white perspective-1000">
-            <div className="container mx-auto px-6 md:px-12">
-                <div className="mb-16 max-w-2xl">
-                    <h2 className="text-sm font-bold uppercase tracking-widest text-stone-500">
-                        Enhance Your Event
-                    </h2>
-                    <h3 className="mt-4 text-5xl font-bold leading-tight md:text-6xl">
-                        Everything you need, <br />
-                        <span className="text-stone-400">all in one place.</span>
-                    </h3>
+        <section className="relative bg-stone-950 py-32 text-white overflow-hidden">
+            {/* Ambient Background Glow */}
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full max-w-7xl pointer-events-none">
+                <div className="absolute top-[20%] left-[10%] w-[500px] h-[500px] bg-purple-900/20 rounded-full blur-[120px]" />
+                <div className="absolute bottom-[20%] right-[10%] w-[500px] h-[500px] bg-blue-900/20 rounded-full blur-[120px]" />
+            </div>
+
+            <div className="container relative mx-auto px-6 md:px-12 z-10">
+                <div className="mb-20 flex flex-col md:flex-row md:items-end justify-between gap-8">
+                    <div className="max-w-2xl">
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            className="flex items-center gap-2 mb-4"
+                        >
+                            <Sparkles className="w-5 h-5 text-amber-400" />
+                            <span className="text-sm font-bold uppercase tracking-widest text-amber-400/80">
+                                Premium Services
+                            </span>
+                        </motion.div>
+                        <motion.h2
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: 0.1 }}
+                            className="text-5xl md:text-7xl font-bold leading-tight"
+                        >
+                            Curated <span className="text-stone-500">Experiences</span>
+                        </motion.h2>
+                    </div>
+                    <motion.p
+                        initial={{ opacity: 0, x: 20 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: 0.2 }}
+                        className="max-w-md text-lg text-stone-400 leading-relaxed"
+                    >
+                        Elevate your event with our comprehensive suite of premium services,
+                        designed to create unforgettable moments.
+                    </motion.p>
                 </div>
 
-                <div className="grid grid-cols-1 gap-6 md:grid-cols-4 md:grid-rows-3 h-[1200px] md:h-[800px]">
+                <div className="grid grid-cols-1 md:grid-cols-4 md:grid-rows-3 gap-6 h-auto md:h-[800px]">
                     {services.map((service, i) => (
-                        <TiltCard key={i} className={service.className}>
-                            <div className="relative h-full w-full">
-                                {/* Background Image with Parallax Depth */}
-                                <div
-                                    className="absolute inset-0 z-0 transition-transform duration-500"
-                                    style={{ transform: "translateZ(-50px) scale(1.2)" }}
-                                >
-                                    <img
-                                        src={service.image}
-                                        alt={service.title}
-                                        className="h-full w-full object-cover opacity-60 transition-opacity duration-500 group-hover:opacity-40"
-                                    />
-                                    <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
-                                </div>
-
-                                {/* Content Floating Above */}
-                                <div
-                                    className="relative z-10 flex h-full flex-col justify-end p-8"
-                                    style={{ transform: "translateZ(50px)" }}
-                                >
-                                    <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-white/10 backdrop-blur-md border border-white/20 shadow-[0_0_20px_rgba(255,255,255,0.1)]">
-                                        <service.icon className="h-6 w-6" />
-                                    </div>
-                                    <h4 className="text-2xl font-bold text-white drop-shadow-lg">
-                                        {service.title}
-                                    </h4>
-                                    <p className="mt-2 max-w-xs text-sm text-stone-200 drop-shadow-md">
-                                        {service.description}
-                                    </p>
-                                </div>
-                            </div>
-                        </TiltCard>
+                        <ServiceCard key={i} service={service} index={i} />
                     ))}
                 </div>
             </div>
@@ -103,75 +115,62 @@ export const ServicesSection = () => {
     );
 };
 
-const ROTATION_RANGE = 20; // Degrees
-const HALF_ROTATION_RANGE = ROTATION_RANGE / 2;
-
-const TiltCard = ({
-    children,
-    className,
-}: {
-    children: React.ReactNode;
-    className?: string;
-}) => {
-    const ref = useRef<HTMLDivElement>(null);
-
-    const x = useMotionValue(0);
-    const y = useMotionValue(0);
-
-    const xSpring = useSpring(x, { stiffness: 300, damping: 30 });
-    const ySpring = useSpring(y, { stiffness: 300, damping: 30 });
-
-    const transform = useMotionTemplate`rotateX(${xSpring}deg) rotateY(${ySpring}deg)`;
-
-    const handleMouseMove = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
-        if (!ref.current) return;
-
-        const rect = ref.current.getBoundingClientRect();
-
-        const width = rect.width;
-        const height = rect.height;
-
-        const mouseX = (e.clientX - rect.left) * ROTATION_RANGE;
-        const mouseY = (e.clientY - rect.top) * ROTATION_RANGE;
-
-        const rX = (mouseY / height - HALF_ROTATION_RANGE) * -1;
-        const rY = mouseX / width - HALF_ROTATION_RANGE;
-
-        x.set(rX);
-        y.set(rY);
-    };
-
-    const handleMouseLeave = () => {
-        x.set(0);
-        y.set(0);
-    };
-
+const ServiceCard = ({ service, index }: { service: any; index: number }) => {
     return (
         <motion.div
-            ref={ref}
-            onMouseMove={handleMouseMove}
-            onMouseLeave={handleMouseLeave}
-            style={{
-                transformStyle: "preserve-3d",
-                transform,
-            }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: index * 0.1 }}
             className={cn(
-                "group relative overflow-hidden rounded-3xl bg-stone-900 border border-white/10",
-                className
+                "group relative overflow-hidden rounded-3xl bg-stone-900/50 border border-white/5 backdrop-blur-sm",
+                service.className
             )}
         >
-            {/* Glossy Glare Effect */}
-            <div
-                style={{
-                    transform: "translateZ(75px)",
-                    transformStyle: "preserve-3d",
-                }}
-                className="absolute inset-4 grid place-content-center rounded-xl opacity-0 transition-opacity duration-500 group-hover:opacity-100 pointer-events-none z-20"
-            >
-                <div className="bg-gradient-to-br from-white/20 to-transparent p-24 blur-3xl" />
+            {/* Background Image with Zoom Effect */}
+            <div className="absolute inset-0 z-0">
+                <img
+                    src={service.image}
+                    alt={service.title}
+                    className="h-full w-full object-cover opacity-40 transition-all duration-700 group-hover:scale-110 group-hover:opacity-30"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-stone-950 via-stone-950/50 to-transparent" />
+
+                {/* Dynamic Color Overlay on Hover */}
+                <div
+                    className={cn(
+                        "absolute inset-0 bg-gradient-to-br opacity-0 transition-opacity duration-500 group-hover:opacity-100 mix-blend-overlay",
+                        service.color
+                    )}
+                />
             </div>
 
-            {children}
+            {/* Content */}
+            <div className="relative z-10 flex h-full flex-col justify-between p-8">
+                <div className="flex justify-between items-start">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-white/5 backdrop-blur-md border border-white/10 transition-colors duration-300 group-hover:bg-white/10 group-hover:border-white/20">
+                        <service.icon className="h-6 w-6 text-white" />
+                    </div>
+
+                    <div className="opacity-0 -translate-x-4 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0">
+                        <div className="h-10 w-10 flex items-center justify-center rounded-full bg-white text-black">
+                            <ArrowRight className="h-4 w-4" />
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-amber-100 transition-colors">
+                        {service.title}
+                    </h3>
+                    <p className="text-stone-300 text-sm leading-relaxed max-w-[90%] group-hover:text-white transition-colors">
+                        {service.description}
+                    </p>
+                </div>
+            </div>
+
+            {/* Glass Shine Effect */}
+            <div className="absolute inset-0 -translate-x-[100%] group-hover:translate-x-[100%] transition-transform duration-1000 bg-gradient-to-r from-transparent via-white/5 to-transparent skew-x-12 pointer-events-none" />
         </motion.div>
     );
 };

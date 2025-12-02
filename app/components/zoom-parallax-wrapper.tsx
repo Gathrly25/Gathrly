@@ -61,9 +61,9 @@ export default function ZoomParallaxWrapper() {
         />
         <div className="w-full md:w-[70%]">
 
-        <h1 className="text-center text-white text-[90px] md:text-[140px] leading-[80px] md:leading-[110px] font-extrabold">
-          QUICK GLANCE TO MAGIC
-        </h1>
+          <h1 className="text-center text-white text-[90px] md:text-[140px] leading-[80px] md:leading-[110px] font-extrabold font-cinzel">
+            QUICK GLANCE TO MAGIC
+          </h1>
         </div>
       </div>
       <ZoomParallax images={images} />
