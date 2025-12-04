@@ -13,7 +13,7 @@ const venues = [
     name: "Lofte 23",
     location: "Downtown Arts District",
     capacity: "500 Guests",
-    image: "https://res.cloudinary.com/dygfdmuri/image/upload/v1764709376/l7_sins5m.webp",
+    image: "/images/Lofte23/L1.jpg",
     description: "A raw, industrial masterpiece featuring exposed brick, soaring timber beams, and panoramic city views. The perfect canvas for bold, modern events.",
   },
   {
@@ -22,7 +22,7 @@ const venues = [
     name: "Velvet Hour",
     location: "West Loop Rooftop",
     capacity: "250 Guests",
-    image: "/images/vh-images/vv1.jpg",
+    image: "/images/velvet-hour/V1.jpg",
     description: "An ultra-chic rooftop lounge oozing sophistication. Floor-to-ceiling glass, plush velvet interiors, and a sunset view that steals the show.",
   },
   {
@@ -31,7 +31,7 @@ const venues = [
     name: "Billionaire Row",
     location: "Gold Coast Mansion",
     capacity: "150 Guests",
-    image: "/images/br-images/br1.JPEG",
+    image: "/images/billionaire-row/br1.jpg",
     description: "Opulence redefined. A historic mansion with manicured gardens, marble ballrooms, and an air of exclusivity that impresses every guest.",
   },
 ];

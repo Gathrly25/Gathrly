@@ -12,6 +12,7 @@ import { SmartCTA } from "../../components/smart-cta";
 import { VenueGallery } from "@/app/components/venue-gallery";
 import { ServicesCTA } from "@/app/components/services-cta";
 import { VideoShowcase } from "@/app/components/video-showcase";
+import CloudinaryVideo from "@/app/components/cloudinary-video";
 
 // Venue Data (Mock Data for now, ideally fetched from an API or CMS)
 const venuesData: Record<string, any> = {
@@ -33,105 +34,82 @@ const venuesData: Record<string, any> = {
             "Custom Lighting",
         ],
         matterportUrl: "https://my.matterport.com/show/?m=2qz8QpCrvgq",
-        videoUrl: "/videos/lofte/lofte-video.mp4",
+        videoUrl: "https://res.cloudinary.com/diu3u1hm1/video/upload/v1764847904/lofte-video_zzshej.mp4",
         images: [
             {
-                src: "https://res.cloudinary.com/dygfdmuri/image/upload/v1764709363/l4_lcslh0.webp",
+                src: "/images/Lofte23/L1.jpg",
                 alt: "Grand Hall Ceremony",
             },
             {
-                src: "https://res.cloudinary.com/dygfdmuri/image/upload/v1764709362/l1_ytvfnp.webp",
+                src: "/images/Lofte23/L2.jpg",
                 alt: "Rooftop Reception",
             },
             {
-                src: "https://res.cloudinary.com/dygfdmuri/image/upload/v1764709365/l2_zmqxqy.webp",
+                src: "/images/Lofte23/L3.jpg",
                 alt: "Table Setting",
             },
             {
-                src: "https://res.cloudinary.com/dygfdmuri/image/upload/v1764709365/l16_m5iwou.webp",
+                src: "/images/Lofte23/L4.jpg",
                 alt: "Stage Setup",
             },
             {
-                src: "https://res.cloudinary.com/dygfdmuri/image/upload/v1764709366/l17_ockbsz.webp",
+                src: "/images/Lofte23/L5.jpg",
                 alt: "Floral Arrangement",
             },
             {
-                src: "https://res.cloudinary.com/dygfdmuri/image/upload/v1764709371/l3_p6ynio.webp",
+                src: "/images/Lofte23/L6.jpg",
                 alt: "Evening Ambiance",
             },
             {
-                src: "https://res.cloudinary.com/dygfdmuri/image/upload/v1764709375/l5_ooqgkg.webp",
+                src: "/images/Lofte23/L7.jpg",
                 alt: "Luxury Details",
             },
             {
-                src: "https://res.cloudinary.com/dygfdmuri/image/upload/v1764709383/l8_ye7lmb.webp",
+                src: "/images/Lofte23/L8.jpg",
                 alt: "Luxury Details",
             },
             {
-                src: "https://res.cloudinary.com/dygfdmuri/image/upload/v1764709385/l10_k7csif.webp",
+                src: "/images/Lofte23/L9.jpg",
                 alt: "Luxury Details",
             },
             {
-                src: "https://res.cloudinary.com/dygfdmuri/image/upload/v1764709389/l22_owbfbx.webp",
+                src: "/images/Lofte23/L27.jpg",
                 alt: "Luxury Details",
             },
             {
-                src: "/images/lofte-images/l12-min.jpg",
+                src: "/images/Lofte23/L11.jpg",
                 alt: "Luxury Details",
             },
             {
-                src: "https://res.cloudinary.com/dygfdmuri/image/upload/v1764709389/l20_k6rxfd.webp",
+                src: "/images/Lofte23/L12.jpg",
                 alt: "Luxury Details",
             },
             {
-                src: "https://res.cloudinary.com/dygfdmuri/image/upload/v1764709393/l11_tvkb69.webp",
+                src: "/images/Lofte23/L13.jpg",
                 alt: "Luxury Details",
             },
             {
-                src: "https://res.cloudinary.com/dygfdmuri/image/upload/v1764709397/l23_vy5850.webp",
+                src: "/images/Lofte23/L14.jpg",
                 alt: "Luxury Details",
             },
             {
-                src: "https://res.cloudinary.com/dygfdmuri/image/upload/v1764709397/l13_tmhyv9.webp",
+                src: "/images/Lofte23/L15.jpg",
                 alt: "Luxury Details",
             },
             {
-                src: "https://res.cloudinary.com/dygfdmuri/image/upload/v1764709406/l12_w458ci.webp",
+                src: "/images/Lofte23/L16.jpg",
                 alt: "Luxury Details",
             },
             {
-                src: "https://res.cloudinary.com/dygfdmuri/image/upload/v1764709408/l15_vizm5k.webp",
+                src: "/images/Lofte23/L17.jpg",
                 alt: "Luxury Details",
             },
             {
-                src: "https://res.cloudinary.com/dygfdmuri/image/upload/v1764709412/l6_w04hel.webp",
+                src: "/images/Lofte23/L18.jpg",
                 alt: "Luxury Details",
-            },
-            // {
-            //     src: "/images/lofte-images/l20-min.jpg",
-            //     alt: "Luxury Details",
-            // },
-            // {
-            //     src: "/images/lofte-images/l21-min.jpg",
-            //     alt: "Luxury Details",
-            // }
-            // {
-            //     src: "/images/lofte-images/l22-min.jpg",
-            //     alt: "Luxury Details",
-            // },
-            // {
-            //     src: "/images/lofte-images/l23-min.jpg",
-            //     alt: "Luxury Details",
-            // },
-            // {
-            //     src: "/images/lofte-images/l24-min.jpg",
-            //     alt: "Luxury Details",
-            // },
-            // {
-            //     src: "/images/lofte-images/l25-min.jpg",
-            //     alt: "Luxury Details",
-            // }
+            }
         ],
+        ghlLink: "https://link.apisystem.tech/widget/form/rMLrh0AQfSF8Z9VzRvlA",
     },
     "velvet-hour": {
         name: "Velvet Hour",
@@ -142,7 +120,7 @@ const venuesData: Record<string, any> = {
         description:
             "An ultra-chic rooftop lounge oozing sophistication. Floor-to-ceiling glass, plush velvet interiors, and a sunset view that steals the show. Velvet Hour is designed for intimate gatherings and high-profile social events where style is paramount.",
         heroImage:
-            "https://images.unsplash.com/photo-1519225421980-715cb0202128?q=80&w=2100&auto=format&fit=crop",
+            "/images/velvet-hour/V1.jpg",
         amenities: [
             "Private Bar",
             "Outdoor Terrace",
@@ -150,40 +128,79 @@ const venuesData: Record<string, any> = {
             "VIP Entrance",
             "Coat Check",
         ],
+        matterportUrl: "https://my.matterport.com/show/?m=VBjFLC7Arur",
+        videoUrl: "https://res.cloudinary.com/diu3u1hm1/video/upload/v1764848252/vv-trim_gt67yc.mp4",
         images: [
             {
-                src: "https://images.unsplash.com/photo-1519225421980-715cb0202128?q=80&w=2100&auto=format&fit=crop",
+                src: "/images/velvet-hour/V2.jpg",
                 alt: "Rooftop Lounge",
             },
             {
-                src: "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?q=80&w=2070&auto=format&fit=crop",
+                src: "/images/velvet-hour/V3.jpg",
                 alt: "Cocktail Bar",
             },
             {
-                src: "https://images.unsplash.com/photo-1561489413-985b06da5bee?q=80&w=2070&auto=format&fit=crop",
+                src: "/images/velvet-hour/V4.jpg",
                 alt: "Sunset View",
             },
             {
-                src: "https://images.unsplash.com/photo-1570554886111-e80fcca6a029?q=80&w=1974&auto=format&fit=crop",
+                src: "/images/velvet-hour/V5.jpg",
                 alt: "VIP Seating",
             },
             {
-                src: "https://images.unsplash.com/photo-1572116469696-31de0f17cc34?q=80&w=1974&auto=format&fit=crop",
+                src: "/images/velvet-hour/V6.jpg",
                 alt: "Evening Atmosphere",
             },
             {
-                src: "https://images.unsplash.com/photo-1516997121675-4c2d1684aa3e?q=80&w=2072&auto=format&fit=crop",
+                src: "/images/velvet-hour/V7.jpg",
                 alt: "Dance Floor",
             },
             {
-                src: "https://images.unsplash.com/photo-1522158637959-30385a09e0da?q=80&w=2070&auto=format&fit=crop",
+                src: "/images/velvet-hour/V8.jpg",
                 alt: "Private Terrace",
             },
             {
-                src: "https://images.unsplash.com/photo-1559339352-11d035aa65de?q=80&w=1974&auto=format&fit=crop",
+                src: "/images/velvet-hour/V9.jpg",
                 alt: "Signature Drinks",
             },
+            {
+                src: "/images/velvet-hour/V10.jpg",
+                alt: "Signature Drinks",
+            },
+            {
+                src: "/images/velvet-hour/V11.jpg",
+                alt: "Signature Drinks",
+            },
+            {
+                src: "/images/velvet-hour/V12.jpg",
+                alt: "Signature Drinks",
+            },
+            {
+                src: "/images/velvet-hour/V13.jpg",
+                alt: "Signature Drinks",
+            },
+            {
+                src: "/images/velvet-hour/V14.jpg",
+                alt: "Signature Drinks",
+            },
+            {
+                src: "/images/velvet-hour/V15.jpg",
+                alt: "Signature Drinks",
+            },
+            {
+                src: "/images/velvet-hour/V16.jpg",
+                alt: "Signature Drinks",
+            },
+            {
+                src: "/images/velvet-hour/V17.jpg",
+                alt: "Signature Drinks",
+            },
+            {
+                src: "/images/velvet-hour/V18.jpg",
+                alt: "Signature Drinks",
+            }
         ],
+        ghlLink: "https://link.apisystem.tech/widget/form/NU65fkqgVI0YEP2fHRQS",
     },
     "billionaire-row": {
         name: "Billionaire Row",
@@ -194,7 +211,9 @@ const venuesData: Record<string, any> = {
         description:
             "Opulence redefined. A historic mansion with manicured gardens, marble ballrooms, and an air of exclusivity that impresses every guest. Ideal for black-tie galas, luxury weddings, and executive retreats.",
         heroImage:
-            "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?q=80&w=2079&auto=format&fit=crop",
+            "/images/Billionaire-Row/br1.jpg",
+        matterportUrl: "https://my.matterport.com/show/?m=VBjFLC7Arur",
+        videoUrl: "https://res.cloudinary.com/diu3u1hm1/video/upload/v1764848252/vv-trim_gt67yc.mp4",
         amenities: [
             "Garden Access",
             "Ballroom",
@@ -204,38 +223,36 @@ const venuesData: Record<string, any> = {
         ],
         images: [
             {
-                src: "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?q=80&w=2079&auto=format&fit=crop",
+                src: "/images/Billionaire-Row/br2.jpg",
                 alt: "Grand Ballroom",
             },
             {
-                src: "https://images.unsplash.com/photo-1519167758481-83f550bb49b3?q=80&w=2098&auto=format&fit=crop",
+                src: "/images/Billionaire-Row/br3.jpg",
                 alt: "Mansion Exterior",
             },
             {
-                src: "https://images.unsplash.com/photo-1507643179173-617aa8769db4?q=80&w=2056&auto=format&fit=crop",
+                src: "/images/Billionaire-Row/br4.jpg",
                 alt: "Library Lounge",
             },
             {
-                src: "https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?q=80&w=2070&auto=format&fit=crop",
+                src: "/images/Billionaire-Row/br5.jpg",
                 alt: "Garden Ceremony",
             },
             {
-                src: "https://images.unsplash.com/photo-1469334031218-e382a71b716b?q=80&w=2070&auto=format&fit=crop",
+                src: "/images/Billionaire-Row/br6.jpg",
                 alt: "Formal Dining",
             },
+
             {
-                src: "https://images.unsplash.com/photo-1520342868574-5fa3804e551c?q=80&w=2069&auto=format&fit=crop",
-                alt: "Entrance Hall",
-            },
-            {
-                src: "https://images.unsplash.com/photo-1566737236500-c8ac43014a67?q=80&w=2070&auto=format&fit=crop",
+                src: "/images/Billionaire-Row/br8.jpg",
                 alt: "Evening Reception",
             },
             {
-                src: "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?q=80&w=2070&auto=format&fit=crop",
+                src: "/images/Billionaire-Row/br9.jpg",
                 alt: "Luxury Details",
             },
         ],
+        ghlLink: "https://link.apisystem.tech/widget/form/0yTza0zmz42iJFiplyzj",
     },
 };
 
@@ -465,7 +482,7 @@ export default function VenueDetailPage() {
             </div>
 
             {/* Smart CTA Section */}
-            <SmartCTA />
+            <SmartCTA ghlLink={venue.ghlLink} />
         </main>
     );
 }

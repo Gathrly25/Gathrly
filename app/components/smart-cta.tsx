@@ -3,7 +3,7 @@ import React, { useRef } from "react";
 import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 import { ArrowRight, Star } from "lucide-react";
 
-export const SmartCTA = () => {
+export const SmartCTA = ({ ghlLink }: { ghlLink: string }) => {
     const containerRef = useRef<HTMLDivElement>(null);
     const { scrollYProgress } = useScroll({
         target: containerRef,
@@ -58,7 +58,7 @@ export const SmartCTA = () => {
                     className="relative group"
                 >
                     <div className="absolute inset-0 rounded-full bg-gradient-to-r from-amber-500 to-purple-600 blur-2xl opacity-50 transition-opacity group-hover:opacity-80" />
-                    <button className="relative flex items-center gap-4 rounded-full bg-white px-12 py-6 text-xl font-bold text-black transition-transform hover:scale-105 active:scale-95">
+                    <button onClick={() => window.open(ghlLink, "_blank")} className="relative flex items-center gap-4 rounded-full bg-white px-12 py-6 text-xl font-bold text-black transition-transform hover:scale-105 active:scale-95">
                         Book This Venue <ArrowRight className="h-6 w-6" />
                     </button>
                 </motion.div>
