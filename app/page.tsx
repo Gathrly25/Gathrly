@@ -56,3 +56,7 @@ const MinimalistHeroDemo = () => {
 };
 
 export default MinimalistHeroDemo;
+
+
+
+
