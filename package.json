@@ -10,6 +10,8 @@
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.2.4",
+    "@stripe/react-stripe-js": "^5.4.1",
+    "@stripe/stripe-js": "^8.6.1",
     "@studio-freight/lenis": "^1.0.42",
     "@studio-freight/react-lenis": "^0.0.47",
     "class-variance-authority": "^0.7.1",
@@ -24,6 +26,8 @@
     "npm": "^11.6.2",
     "react": "19.2.1",
     "react-dom": "19.2.1",
+    "sonner": "^2.0.7",
+    "stripe": "^20.1.2",
     "tailwind-merge": "^3.4.0",
     "tailwindcss-animate": "^1.0.7",
     "three": "^0.181.1"
