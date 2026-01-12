@@ -1,8 +1,10 @@
+// app/components/venue-gallery.tsx (updated)
 "use client";
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, ChevronLeft, ChevronRight, Maximize2 } from "lucide-react";
 import { cn } from "../lib/utils";
+import Image from "next/image";
 
 interface VenueGalleryProps {
     images: {
@@ -74,10 +76,12 @@ export const VenueGallery = ({ images }: VenueGalleryProps) => {
                         className="group relative aspect-square cursor-pointer overflow-hidden rounded-[4px] bg-stone-200"
                         onClick={() => setSelectedIndex(i)}
                     >
-                        <img
+                        <Image
                             src={image.src}
                             alt={image.alt}
-                            className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+                            fill
+                            className="object-cover transition-transform duration-500 group-hover:scale-110"
+                            sizes="(min-width: 768px) 25vw, 50vw"
                         />
                         <div className="absolute inset-0 bg-black/0 transition-colors duration-300 group-hover:bg-black/20" />
 
@@ -120,16 +124,21 @@ export const VenueGallery = ({ images }: VenueGalleryProps) => {
                             {/* Main Image Area */}
                             <div className="relative flex-1 overflow-hidden">
                                 <AnimatePresence mode="wait">
-                                    <motion.img
+                                    <motion.div
                                         key={selectedIndex}
-                                        src={images[selectedIndex].src}
-                                        alt={images[selectedIndex].alt}
                                         initial={{ opacity: 0, x: 20 }}
                                         animate={{ opacity: 1, x: 0 }}
                                         exit={{ opacity: 0, x: -20 }}
                                         transition={{ duration: 0.3 }}
-                                        className="h-full w-full object-contain p-4 md:p-8"
-                                    />
+                                        className="relative h-full w-full p-4 md:p-8"
+                                    >
+                                        {/* Use img tag for modal since we need dynamic src */}
+                                        <img
+                                            src={images[selectedIndex].src}
+                                            alt={images[selectedIndex].alt}
+                                            className="h-full w-full object-contain"
+                                        />
+                                    </motion.div>
                                 </AnimatePresence>
 
                                 {/* Navigation Buttons */}
@@ -178,6 +187,7 @@ export const VenueGallery = ({ images }: VenueGalleryProps) => {
                                                         : "border-transparent opacity-50 hover:opacity-80"
                                                 )}
                                             >
+                                                {/* Use img tag for thumbnails in modal */}
                                                 <img
                                                     src={img.src}
                                                     alt={img.alt}

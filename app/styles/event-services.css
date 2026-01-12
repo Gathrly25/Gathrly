@@ -1,0 +1,36 @@
+/* styles/event-services.css */
+.venue-services-container {
+  background: linear-gradient(135deg, #fffaf0 0%, #fff 100%);
+}
+
+.service-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.image-overlay {
+  background: linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0) 100%);
+}
+
+/* Scrollbar styling for services list */
+.services-list::-webkit-scrollbar {
+  width: 4px;
+}
+
+.services-list::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.services-list::-webkit-scrollbar-thumb {
+  background: #d97706;
+  border-radius: 10px;
+}
+
+.services-list::-webkit-scrollbar-thumb:hover {
+  background: #b45309;
+}
