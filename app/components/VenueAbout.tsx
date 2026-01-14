@@ -26,13 +26,13 @@ export const VenueAbout = ({ venue }: Props) => {
         
         <div className="flex items-center justify-center gap-3 mb-3">
           <Quote className="w-6 h-6 text-amber-400 rotate-180" />
-          <h1 className="text-4xl md:text-5xl font-bold text-white">
+          <h1 className="text-4xl md:text-5xl font-bold text-white font-cinzel">
             ABOUT THE VENUE
           </h1>
           <Quote className="w-6 h-6 text-amber-400" />
         </div>
         
-        <p className="text-sm font-semibold uppercase tracking-widest text-amber-300">
+        <p className="text-sm font-semibold uppercase tracking-widest text-amber-300 font-cinzel">
           Discover the Essence of Elegance
         </p>
       </div>

@@ -28,69 +28,69 @@ export default function ServiceAbout() {
   return (
     <section 
       ref={sectionRef}
-      className="relative py-16 px-4 sm:px-6 lg:px-8 text-white overflow-hidden bg-black"
+      className="relative py-8 md:py-16 px-4 sm:px-6 lg:px-8 text-white overflow-hidden bg-black"
     >
-      {/* Background decorative elements - FIXED */}
-      <div className="absolute top-15 left-4 md:left-14 z-0">
-        <Sparkles className="w-16 h-16 text-amber-500/30" />
+      {/* Background decorative elements */}
+      <div className="absolute top-4 md:top-15 left-4 md:left-14 z-0">
+        <Sparkles className="w-10 h-10 md:w-16 md:h-16 text-amber-500/30" />
       </div>
-      <div className="absolute top-24 right-4 md:right-20 z-0">
-        <Star className="w-14 h-14 text-amber-500/30" />
+      <div className="absolute top-12 md:top-24 right-4 md:right-20 z-0">
+        <Star className="w-8 h-8 md:w-14 md:h-14 text-amber-500/30" />
       </div>
-      <div className="absolute bottom-32 left-8 md:left-12 z-0">
+      <div className="absolute bottom-16 md:bottom-32 left-6 md:left-12 z-0">
+        <Star className="w-7 h-7 md:w-12 md:h-12 text-amber-500/30" />
+      </div>
+      <div className="absolute bottom-10 md:bottom-16 right-6 md:right-16 z-0">
+        <Sparkles className="w-9 h-9 md:w-14 md:h-14 text-amber-500/30" />
+      </div>
+      <div className="absolute top-1/5 left-1/4 z-0 hidden md:block">
         <Star className="w-12 h-12 text-amber-500/30" />
       </div>
-      <div className="absolute bottom-16 right-8 md:right-16 z-0">
-        <Sparkles className="w-14 h-14 text-amber-500/30" />
-      </div>
-      <div className="absolute top-1/5 left-1/4 z-0">
-        <Star className="w-12 h-12 text-amber-500/30" />
-      </div>
-      <div className="absolute top-1/3 right-1/3 z-0">
+      <div className="absolute top-1/3 right-1/3 z-0 hidden md:block">
         <Sparkles className="w-14 h-14 text-amber-500/30" />
       </div>
 
       <div className="relative z-10 mx-auto max-w-6xl">
         {/* Section Heading */}
-        <div className={`mb-12 text-center transition-all duration-700 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+        <div className={`mb-8 md:mb-12 text-center transition-all duration-700 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
+          <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-white mb-3 md:mb-4 font-cinzel">
             SERVICE OVERVIEW
           </h2>
 
           {/* Subtitle */}
-          <p className="text-lg text-amber-300/80 font-light max-w-2xl mx-auto">
+          <p className="text-base md:text-lg text-amber-300/80 font-light max-w-2xl mx-auto font-cinzel">
             Where sophistication meets exceptional experience
           </p>
         </div>
 
         {/* GRID */}
-        <div className={`grid grid-cols-1 gap-8 md:grid-cols-3 transition-all duration-700 delay-200 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
+        <div className={`grid grid-cols-1 gap-6 md:grid-cols-3 md:gap-8 transition-all duration-700 delay-200 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
           {/* ROW 1 - TEXT */}
           <TextBlock
-            icon={<Flower className="w-8 h-8" />}
+            icon={<Flower className="w-6 h-6 md:w-8 md:h-8" />}
             text="Located in the heart of the city, the space offers a refined atmosphere designed to elevate every celebration. From intimate gatherings to grand events, our venue provides the perfect backdrop for your special moments."
           />
 
           {/* ROW 1 - IMAGE */}
-          <ImageBlock src="/images/service1.jpg" />
+          <ImageBlock src="/images/aboutService1.jpg" />
 
           {/* ROW 1 - TEXT */}
           <TextBlock
-            icon={<Heart className="w-8 h-8" />}
+            icon={<Heart className="w-6 h-6 md:w-8 md:h-8" />}
             text="Thoughtfully curated interiors ensure comfort, elegance, and a memorable experience for every guest. With a blend of contemporary design and timeless elegance."
           />
 
           {/* ROW 2 - IMAGE */}
-          <ImageBlock src="/images/service2.jpg" />
+          <ImageBlock src="/images/aboutService2.jpg" />
 
           {/* ROW 2 - TEXT */}
           <TextBlock
-            icon={<Volume2 className="w-8 h-8" />}
+            icon={<Volume2 className="w-6 h-6 md:w-8 md:h-8" />}
             text="Balanced acoustics and ambient lighting create the perfect mood for intimate or grand occasions. Experience unparalleled service in an environment crafted for distinction."
           />
 
           {/* ROW 2 - IMAGE */}
-          <ImageBlock src="/images/service3.jpg" />
+          <ImageBlock src="/images/aboutService4.jpg" />
         </div>
       </div>
     </section>
@@ -108,14 +108,14 @@ function TextBlock({
   text: string;
 }) {
   return (
-    <div className="flex flex-col items-center justify-center p-6 text-center h-[280px] bg-black/50 rounded-lg border border-amber-400/20">
+    <div className="flex flex-col items-center justify-center p-4 md:p-6 text-center h-[220px] md:h-[280px] bg-black/50 rounded-lg border border-amber-400/20">
       {/* Icon Container */}
-      <div className="mb-4 text-amber-400">
+      <div className="mb-3 md:mb-4 text-amber-400">
         {icon}
       </div>
 
       {/* Text */}
-      <p className="text-base leading-relaxed text-white/90">
+      <p className="text-sm md:text-base leading-relaxed text-white/90">
         {text}
       </p>
     </div>
@@ -129,7 +129,7 @@ function ImageBlock({ src }: { src: string }) {
   const [loaded, setLoaded] = useState(false);
 
   return (
-    <div className="relative h-[280px] overflow-hidden rounded-lg">
+    <div className="relative h-[220px] md:h-[280px] overflow-hidden rounded-lg">
       <Image
         src={src}
         alt="Luxury service experience"

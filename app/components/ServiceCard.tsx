@@ -18,10 +18,14 @@ const ServiceCard = ({ title, description, image, slug }: Props) => {
       whileHover={{ scale: 1.04 }}
       onClick={() => router.push(`/services/${slug}`)}
       className="
-        relative min-w-[340px] h-[420px]
+        relative w-[250px] h-[360px]
+        sm:w-[280px] sm:h-[380px]
+        md:w-[300px] md:h-[400px]
+        lg:w-[320px] lg:h-[420px]
         rounded-2xl overflow-hidden
         border border-white/10 bg-black
         cursor-pointer group
+        flex-shrink-0
       "
     >
       {/* IMAGE */}
@@ -35,18 +39,16 @@ const ServiceCard = ({ title, description, image, slug }: Props) => {
         "
       />
 
-      {/* <div className="absolute inset-0 bg-black/50" /> */}
-
       {/* CONTENT */}
-      <div className="relative z-10 h-full p-8 flex flex-col justify-between">
+      <div className="relative z-10 h-full p-6 sm:p-7 lg:p-8 flex flex-col justify-between">
         <div>
-          <h3 className="text-2xl font-semibold">{title}</h3>
-          <p className="mt-4 text-gray-300 leading-relaxed">
+          <h3 className="text-xl sm:text-2xl font-semibold">{title}</h3>
+          <p className="mt-3 sm:mt-4 text-amber-400 leading-relaxed text-sm sm:text-base">
             {description}
           </p>
         </div>
 
-        <span className="text-sm uppercase tracking-widest text-amber-400">
+        <span className="text-xs sm:text-sm uppercase tracking-widest text-amber-400 font-cinzel font-bold">
           View Service →
         </span>
       </div>

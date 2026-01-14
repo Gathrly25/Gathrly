@@ -60,7 +60,7 @@ export const VenueAmenities = ({ venue }: Props) => {
           <Star className="w-4 h-4 text-amber-400" />
         </div>
         
-        <h1 className="text-right my-6 text-4xl md:text-5xl font-bold text-white">
+        <h1 className="text-right my-6 text-4xl md:text-5xl font-bold text-white font-cinzel">
           AMENITIES & FEATURES
         </h1>
         

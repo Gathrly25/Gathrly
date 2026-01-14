@@ -11,86 +11,88 @@ export const VenuesShowcase = () => {
   const router = useRouter();
 
   return (
-    <section className="relative min-h-screen py-24 text-white bg-black">
-      {/* Gold decorative top border */}
-      <div 
-        className="absolute top-0 left-0 right-0 h-1"
-        style={{background: 'linear-gradient(90deg, #a67c00 0%, #ffd700 50%, #a67c00 100%)'}}
-      ></div>
+    <section className="relative min-h-screen py-12 md:py-24 bg-black">
+      {/* Sparkles and Stars Background */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute top-30 left-20 w-20 h-20 opacity-30">
+          <Sparkles className="w-full h-full text-amber-400" />
+        </div>
+        <div className="absolute top-1/4 right-25 w-16 h-16 opacity-20">
+          <Star className="w-full h-full text-amber-300" />
+        </div>
+        <div className="absolute top-1/5 right-1/3 w-12 h-12 opacity-15">
+          <Star className="w-full h-full text-amber-400" />
+        </div>
+        <div className="absolute top-1/3 left-1/3 w-14 h-14 opacity-25">
+          <Sparkles className="w-full h-full text-amber-400/80" />
+        </div>
+      </div>
 
-      <div className="container mx-auto px-6 md:px-12">
-        <div className="mb-16 flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
-          <div>
-            <div className="flex items-center gap-2 mb-2">
-              <Sparkles 
-                className="w-5 h-5" 
-                style={{color: '#f7c31aff'}} 
-              />
-              <h2 
-                className="text-sm font-bold uppercase tracking-widest"
-                style={{color: '#fffbf1ff'}}
-              >
-                Our Spaces
-              </h2>
-              <Sparkles 
-                className="w-5 h-5" 
-                style={{color: '#f7c31aff'}} 
-              />
-            </div>
-            <h3 className="mt-4 text-5xl font-bold md:text-7xl text-white">
+      {/* Top decorative elements */}
+      <div className='absolute top-8 md:top-16 left-4 md:left-10 lg:left-16 flex items-center gap-2 md:gap-4 z-10'>
+        <div
+          className='w-12 md:w-24 h-px'
+          style={{
+            background: "linear-gradient(90deg, #f5ca5d 0%, transparent 100%)",
+          }}
+        ></div>
+        <div className='flex items-center gap-1 md:gap-2'>
+          <Sparkles className='w-4 h-4 md:w-5 md:h-5 text-amber-400' />
+          <Star className='w-3 h-3 md:w-4 md:h-4 text-amber-400' />
+        </div>
+      </div>
+
+      <div className="container mx-auto px-4 md:px-6 lg:px-12 relative z-10">
+        {/* HEADING SECTION - Simplified */}
+        <div className='px-2 md:px-6 lg:px-16 mb-12 md:mb-16'>
+          <div className='flex items-center gap-3 md:gap-4 mb-2 md:mb-3'>
+            <h2 className='text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white font-cinzel'>
               Iconic Venues
-            </h3>
-            
-            {/* Rating and location badge */}
-            <div className="mt-6 flex items-center gap-3">
-              <div className="flex items-center gap-1 px-3 py-1 rounded-full bg-black/80 border border-amber-800">
-                <Star className="w-4 h-4" style={{color: '#f7c31aff'}} />
-                <span style={{color: '#fffbf1ff'}} className="text-sm font-medium">Premium Rated</span>
-              </div>
-              <div className="flex items-center gap-1 px-3 py-1 rounded-full bg-black/80 border border-amber-800">
-                <MapPin className="w-4 h-4" style={{color: '#f7c31aff'}} />
-                <span style={{color: '#fffbf1ff'}} className="text-sm font-medium">Prime Locations</span>
-              </div>
-            </div>
+            </h2>
           </div>
-          
-          <div className="relative max-w-md">
-            {/* Corner decorations */}
-            <div className="absolute -top-2 -left-2 w-4 h-4 border-t-2 border-l-2" style={{borderColor: '#f5ca5d'}}></div>
-            <div className="absolute -top-2 -right-2 w-4 h-4 border-t-2 border-r-2" style={{borderColor: '#f5ca5d'}}></div>
-            <div className="absolute -bottom-2 -left-2 w-4 h-4 border-b-2 border-l-2" style={{borderColor: '#f5ca5d'}}></div>
-            <div className="absolute -bottom-2 -right-2 w-4 h-4 border-b-2 border-r-2" style={{borderColor: '#f5ca5d'}}></div>
-            
-            <p 
-              className="text-lg p-4 rounded-lg border"
-              style={{
-                color: '#fffbf1ff',
-                backgroundColor: 'rgba(30, 30, 30, 0.8)',
-                borderColor: '#8c7853',
-                boxShadow: '0 4px 12px rgba(0, 0, 0, 0.3)'
-              }}
-            >
-              Discover our collection of exclusive venues, each designed to create
-              unforgettable atmospheres for your most important moments.
-            </p>
+
+          {/* Subtitle - Simplified */}
+          <p className='text-base md:text-lg lg:text-xl text-amber-400 mb-3 font-cinzel font-light'>
+            Discover our collection of exclusive venues, each designed to create
+            unforgettable atmospheres for your most important moments.
+          </p>
+
+          {/* Rating and location badge */}
+          <div className="mt-4 md:mt-6 flex items-center gap-2 md:gap-3 ml-1 md:ml-2">
+            <div className="flex items-center gap-1 px-2 py-1 md:px-3 md:py-1 rounded-full bg-black/80 border border-amber-400/50">
+              <Star className="w-3 h-3 md:w-4 md:h-4 text-amber-400" />
+              <span className="text-xs md:text-sm font-medium text-white">Premium Rated</span>
+            </div>
+            <div className="flex items-center gap-1 px-2 py-1 md:px-3 md:py-1 rounded-full bg-black/80 border border-amber-400/50">
+              <MapPin className="w-3 h-3 md:w-4 md:h-4 text-amber-400" />
+              <span className="text-xs md:text-sm font-medium text-white">Prime Locations</span>
+            </div>
           </div>
         </div>
 
         <VenuesGrid onSelect={setSelectedId} />
       </div>
 
-      {/* Gold decorative bottom border */}
-      <div 
-        className="absolute bottom-0 left-0 right-0 h-1"
-        style={{background: 'linear-gradient(90deg, #a67c00 0%, #ffd700 50%, #a67c00 100%)'}}
-      ></div>
-
-      {/* Floating decorative elements */}
-      <div className="absolute top-1/4 right-8 opacity-20">
-        <Star className="w-12 h-12" style={{color: '#f5ca5d'}} />
+      {/* Bottom decorative elements */}
+      <div className='absolute bottom-8 md:bottom-16 right-4 md:right-10 lg:right-16 flex items-center gap-2 md:gap-4 z-10'>
+        <div className='flex items-center gap-1 md:gap-2'>
+          <Star className='w-3 h-3 md:w-4 md:h-4 text-amber-400' />
+          <Sparkles className='w-4 h-4 md:w-5 md:h-5 text-amber-400' />
+        </div>
+        <div
+          className='w-12 md:w-24 h-px'
+          style={{
+            background: "linear-gradient(90deg, transparent 0%, #f5ca5d 100%)",
+          }}
+        ></div>
       </div>
-      <div className="absolute bottom-1/4 left-8 opacity-20">
-        <Star className="w-10 h-10" style={{color: '#f5ca5d'}} />
+
+      {/* Background decorative elements */}
+      <div className="absolute top-1/4 right-4 md:right-8 opacity-20 z-0">
+        <Star className="w-8 h-8 md:w-12 md:h-12 text-amber-400/20" />
+      </div>
+      <div className="absolute bottom-1/4 left-4 md:left-8 opacity-20 z-0">
+        <Star className="w-6 h-6 md:w-10 md:h-10 text-amber-400/20" />
       </div>
 
       <VenueModal

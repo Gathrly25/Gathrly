@@ -51,7 +51,7 @@ export const VenueGallerySection = ({ venue }: Props) => {
         {/* Main heading with decorative icons */}
         <div className="flex items-center justify-center gap-3 mb-6">
           {/* <Sparkles className="w-5 h-5 text-amber-400" /> */}
-          <h1 className="text-4xl md:text-5xl font-bold text-white text-center">
+          <h1 className="text-4xl md:text-5xl font-bold text-white text-center font-cinzel">
             IMMERSIVE GALLERY
           </h1>
           {/* <Star className="w-5 h-5 text-amber-400" /> */}
@@ -65,7 +65,7 @@ export const VenueGallerySection = ({ venue }: Props) => {
               background: 'linear-gradient(90deg, #f5ca5d 0%, transparent 100%)'
             }}
           ></div>
-          <p className="text-sm font-medium uppercase tracking-widest text-amber-300 text-center">
+          <p className="text-sm font-medium uppercase tracking-widest text-amber-300 text-center font-cinzel">
             Visual Journey Through Our Spaces
           </p>
           <div 
