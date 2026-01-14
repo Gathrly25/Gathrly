@@ -24,7 +24,7 @@ export const VenueVirtualTour = ({ venue }: Props) => {
             <PlayCircle className="w-4 h-4 text-amber-400" />
           </div>
           
-          <h1 className="text-right my-8 text-4xl md:text-5xl font-bold text-white">
+          <h1 className="text-right my-8 text-4xl md:text-5xl font-bold text-white font-cinzel">
             VIRTUAL TOUR
           </h1>
           

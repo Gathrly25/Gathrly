@@ -18,31 +18,31 @@ export default function ZoomParallaxWrapper() {
 
   const images = [
     {
-      src: "/images/Billionaire-Row/br4.jpg",
+      src: "/parallex-image/parallex-img1.jpg",
       alt: "Lofte image 1",
     },
     {
-      src: "/images/Billionaire-Row/br5.jpg",
+      src: "/parallex-image/parallex-img2.jpg",
       alt: "Lofte image 2",
     },
     {
-      src: "/images/Billionaire-Row/br3.jpg",
+      src: "/parallex-image/parallex-img3.jpg",
       alt: "Lofte Image 3",
     },
     {
-      src: "/images/Billionaire-Row/br2.jpg",
+      src: "/parallex-image/parallex-img4.jpg",
       alt: "VVH1 Image",
     },
     {
-      src: "/images/Billionaire-Row/br5.jpg",
+      src: "/parallex-image/parallex-img5.jpg",
       alt: "VVH2 Image",
     },
     {
-      src: "/images/Billionaire-Row/br6.jpg",
+      src: "/parallex-image/parallex-img6.jpg",
       alt: "VVH3 Image",
     },
     {
-      src: "/images/Billionaire-Row/br6.jpg",
+      src: "/parallex-image/parallex-img7.jpg",
       alt: "VVH4 Image",
     },
   ];
@@ -61,7 +61,7 @@ export default function ZoomParallaxWrapper() {
         />
         <div className="w-full md:w-[70%]">
 
-          <h1 className="text-center text-white text-[90px] md:text-[140px] leading-[80px] md:leading-[110px] font-extrabold font-cinzel">
+          <h1 className="text-center text-white text-[80px] md:text-[130px] leading-[70px] md:leading-[100px] font-extrabold font-cinzel">
             QUICK GLANCE TO MAGIC
           </h1>
         </div>

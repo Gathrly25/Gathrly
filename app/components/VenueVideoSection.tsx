@@ -33,7 +33,7 @@ export const VenueVideoSection = ({ venue }: Props) => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-left my-8 text-4xl md:text-6xl leading-tight font-extrabold text-white"
+          className="text-left my-8 text-4xl md:text-6xl leading-tight font-extrabold text-white font-cinzel"
         >
           VIDEO SHOWCASE
         </motion.h1>

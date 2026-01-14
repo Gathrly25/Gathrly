@@ -39,14 +39,14 @@ export const MinimalistHero = ({
     return (
         <div
             ref={containerRef}
-            className="relative h-screen w-full overflow-hidden bg-stone-950 text-stone-100"
+            className="relative h-screen w-full overflow-hidden bg-stone-950 text-white"
         >
             {/* Background Image with Parallax */}
             <motion.div
                 style={{ y, opacity }}
                 className="absolute inset-0 z-0"
             >
-                <div className="absolute inset-0 bg-black/40 z-10" />
+                <div className="absolute inset-0 z-10" />
                 <img
                     src={imageSrc}
                     alt="Hero Background"
@@ -55,7 +55,7 @@ export const MinimalistHero = ({
             </motion.div>
 
             {/* Content Container */}
-            <div className="relative z-20 flex h-full flex-col justify-between px-6 py-8 md:px-12 md:py-12 max-w-[1800px] mx-auto">
+            <div className="relative z-20 flex text-white h-full flex-col justify-between px-6 py-8 md:px-12 md:py-12 max-w-[1800px] mx-auto">
                 {/* Header */}
                 <motion.header
                     initial={{ y: -20, opacity: 0 }}
@@ -64,12 +64,12 @@ export const MinimalistHero = ({
                     className="flex items-center justify-between"
                 >
                     <span className="text-xl font-bold tracking-tight">{logoText}</span>
-                    <nav className="hidden md:flex items-center gap-8">
+                    <nav className="hidden md:flex items-center gap-8 text-white">
                         {navLinks.map((link, i) => (
                             <a
                                 key={i}
                                 href={link.href}
-                                className="text-sm font-medium uppercase tracking-widest opacity-70 hover:opacity-100 transition-opacity"
+                                className="text-sm text-white font-medium uppercase tracking-widest opacity-70 hover:opacity-100 transition-opacity"
                             >
                                 {link.label}
                             </a>
@@ -90,10 +90,10 @@ export const MinimalistHero = ({
                             transition={{ delay: 0.4, duration: 0.8 }}
                             className="flex items-center gap-4"
                         >
-                            <button className="flex h-12 w-12 items-center justify-center rounded-full border border-white/30 backdrop-blur-sm hover:bg-white hover:text-black transition-all group">
+                            <button className="flex h-12 w-12 items-center justify-center rounded-full border border-white backdrop-blur-sm hover:bg-white hover:text-black transition-all group">
                                 <Play className="h-4 w-4 fill-current" />
                             </button>
-                            <span className="text-sm font-medium tracking-wide opacity-80">
+                            <span className="text-sm font-medium tracking-wide text-white opacity-80">
                                 Watch Showreel
                             </span>
                         </motion.div>
@@ -101,7 +101,7 @@ export const MinimalistHero = ({
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.5, duration: 0.8 }}
-                            className="text-lg leading-relaxed text-stone-300"
+                            className="text-lg leading-relaxed text-white"
                         >
                             {mainText}
                         </motion.p>
@@ -133,7 +133,7 @@ export const MinimalistHero = ({
                                     delay: 0.3,
                                 }}
                                 className="text-[12vw] leading-[0.85] font-bold tracking-tighter uppercase text-transparent stroke-text font-cinzel"
-                                style={{ WebkitTextStroke: "2px white" }}
+                                style={{ WebkitTextStroke: "3px white" }}
                             >
                                 {overlayText.part2}
                             </motion.h1>

@@ -5,13 +5,15 @@ import { loadStripe } from "@stripe/stripe-js";
 import { MinimalistHero } from "./components/hero-section";
 import { StaggerTestimonials } from "./components/testimonials";
 import { Footer } from "./components/footer";
-import { Marquee } from "./components/marquee";
+// import { Marquee } from "./components/marquee";
 import { ProcessSection } from "./components/process";
 import { FAQSection } from "./components/faq";
 import ZoomParallaxWrapper from "./components/zoom-parallax-wrapper";
 import { VenuesShowcase } from "./components/VenuesShowcase";
 import ServicesSection from "./components/ServicesSection";
 // import AboutSection from "./components/AboutSection";
+import AboutGathrly from './components/AboutGathrly';
+import GathrlyShowcase from "./components/GathrlyShowcase";
 
 if (process.env.NEXT_PUBLIC_STRIPE_PUBLIC_KEY === undefined) {
   throw new Error("NEXT_PUBLIC_STRIPE_PUBLIC_KEY is not defined");
@@ -34,7 +36,7 @@ const MinimalistHeroDemo = () => {
           navLinks={navLinks}
           mainText="Handpicked spaces. Effortless experiences. From birthdays to business soirées. We set the stage for your moments."
           readMoreLink="#"
-          imageSrc="https://img1.wsimg.com/isteam/ip/ad26af50-a850-41d3-a26a-2ea321999458/IMG_7569.JPG"
+          imageSrc="https://images.pexels.com/photos/27852853/pexels-photo-27852853.jpeg?cs=srgb&dl=pexels-pran-27852853.jpg&fm=jpg"
           imageAlt="Luxury Venue"
           overlayText={{
             part1: "Book",
@@ -44,9 +46,14 @@ const MinimalistHeroDemo = () => {
           locationText="Chicago, IL"
         />
 
-        <Marquee />
+        {/* <Marquee /> */}
+
+        <AboutGathrly />
+
+        <GathrlyShowcase />
+        
         <ZoomParallaxWrapper />
-        {/* <AboutSection /> */}
+  
         <VenuesShowcase />
 
         <ProcessSection />
