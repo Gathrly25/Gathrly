@@ -4,12 +4,12 @@ export const venuesData: Record<string, any> = {
         name: "Lofte 23",
         tagline: "Industrial Elegance Reimagined",
         location: "Downtown Arts District",
-        capacity: "500 Guests",
+        capacity: "500 Guests Banquet",
         price: "$$$",
         description:
             "Lofte 23 is a raw, industrial masterpiece featuring exposed brick, soaring timber beams, and panoramic city views. The perfect canvas for bold, modern events. This space transforms seamlessly from a daylight-filled gallery to a moody, atmospheric evening venue.",
         heroImage:
-            "/images/Lofte23/L18.jpg", // Added leading slash
+            "/images/iconic-venue/iconic-venue1.webp", // Added leading slash
         amenities: [
             "Rooftop Access",
             "Bridal Suite",
@@ -21,63 +21,63 @@ export const venuesData: Record<string, any> = {
         videoUrl: "https://res.cloudinary.com/diu3u1hm1/video/upload/v1764847904/lofte-video_zzshej.mp4",
         images: [
             {
-                src: "/images/Lofte23/L1.jpg",
+                src: "/images/Lofte23/L1.webp",
                 alt: "Grand Hall Ceremony",
             },
             {
-                src: "/images/Lofte23/L5.jpg",
+                src: "/images/Lofte23/L5.webp",
                 alt: "Rooftop Reception",
             },
             {
-                src: "/images/Lofte23/L17.jpg",
+                src: "/images/Lofte23/L17.webp",
                 alt: "Table Setting",
             },
             {
-                src: "/images/Lofte23/L26.jpg",
+                src: "/images/Lofte23/L26.webp",
                 alt: "Floral Arrangement",
             },
             {
-                src: "/images/Lofte23/L27.jpg",
+                src: "/images/Lofte23/L27.webp",
                 alt: "Grand Hall Ceremony",
             },
             {
-                src: "/images/Lofte23/L32.jpg",
+                src: "/images/Lofte23/L32.webp",
                 alt: "Table Setting",
             },
             {
-                src: "/images/Lofte23/L33.jpg",
+                src: "/images/Lofte23/L33.webp",
                 alt: "Stage Setup",
             },
             {
-                src: "/images/Lofte23/L34.jpg",
+                src: "/images/Lofte23/L34.webp",
                 alt: "Floral Arrangement",
             },
             {
-                src: "/images/Lofte23/L35.jpg",
+                src: "/images/Lofte23/L35.webp",
                 alt: "Grand Hall Ceremony",
             },
             {
-                src: "/images/Lofte23/L37.jpg",
+                src: "/images/Lofte23/L37.webp",
                 alt: "Table Setting",
             },
             {
-                src: "/images/Lofte23/L41.jpg",
+                src: "/images/Lofte23/L41.webp",
                 alt: "Stage Setup",
             },
             {
-                src: "/images/Lofte23/L44.jpg",
+                src: "/images/Lofte23/L44.webp",
                 alt: "Floral Arrangement",
             },
             {
-                src: "/images/Lofte23/L45.jpg",
+                src: "/images/Lofte23/L45.webp",
                 alt: "Stage Setup",
             },
             {
-                src: "/images/Lofte23/L47.jpg",
+                src: "/images/Lofte23/L47.webp",
                 alt: "Stage Setup",
             },
             {
-                src: "/images/Lofte23/L50.jpg",
+                src: "/images/Lofte23/L50.webp",
                 alt: "Stage Setup",
             },
         ],
@@ -87,12 +87,12 @@ export const venuesData: Record<string, any> = {
         name: "Velvet Hour",
         tagline: "Sophistication Above the City",
         location: "West Loop Rooftop",
-        capacity: "250 Guests",
+        capacity: "250 Guests Banquet",
         price: "$$$$",
         description:
             "An ultra-chic rooftop lounge oozing sophistication. Floor-to-ceiling glass, plush velvet interiors, and a sunset view that steals the show. Velvet Hour is designed for intimate gatherings and high-profile social events where style is paramount.",
         heroImage:
-            "/images/velvet-hour/V11.jpg",
+            "/images/iconic-venue/iconic-venue2.webp",
         amenities: [
             "Private Bar",
             "Outdoor Terrace",
@@ -104,67 +104,67 @@ export const venuesData: Record<string, any> = {
         videoUrl: "https://res.cloudinary.com/diu3u1hm1/video/upload/v1764848252/vv-trim_gt67yc.mp4",
         images: [
             {
-                src: "/images/velvet-hour/V1.jpg",
+                src: "/images/velvet-hour/V1.webp",
                 alt: "Rooftop Lounge",
             },
             {
-                src: "/images/velvet-hour/V2.jpg",
+                src: "/images/velvet-hour/V2.webp",
                 alt: "Rooftop Lounge",
             },
             {
-                src: "/images/velvet-hour/V3.jpg",
+                src: "/images/velvet-hour/V3.webp",
                 alt: "Cocktail Bar",
             },
             {
-                src: "/images/velvet-hour/V4.jpg",
+                src: "/images/velvet-hour/V4.webp",
                 alt: "Sunset View",
             },
             {
-                src: "/images/velvet-hour/V5.jpg",
+                src: "/images/velvet-hour/V5.webp",
                 alt: "VIP Seating",
             },
             {
-                src: "/images/velvet-hour/V6.jpg",
+                src: "/images/velvet-hour/V6.webp",
                 alt: "Rooftop Lounge",
             },
             {
-                src: "/images/velvet-hour/V7.jpg",
+                src: "/images/velvet-hour/V7.webp",
                 alt: "Rooftop Lounge",
             },
             {
-                src: "/images/velvet-hour/V9.jpg",
+                src: "/images/velvet-hour/V9.webp",
                 alt: "Rooftop Lounge",
             },
             {
-                src: "/images/velvet-hour/V10.jpg",
+                src: "/images/velvet-hour/V10.webp",
                 alt: "Rooftop Lounge",
             },
             {
-                src: "/images/velvet-hour/V11.jpg",
+                src: "/images/velvet-hour/V11.webp",
                 alt: "Rooftop Lounge",
             },
             {
-                src: "/images/velvet-hour/V12.jpg",
+                src: "/images/velvet-hour/V12.webp",
                 alt: "Rooftop Lounge",
             },
             {
-                src: "/images/velvet-hour/V13.jpg",
+                src: "/images/velvet-hour/V13.webp",
                 alt: "Rooftop Lounge",
             },
             {
-                src: "/images/velvet-hour/V14.jpg",
+                src: "/images/velvet-hour/V14.webp",
                 alt: "Rooftop Lounge",
             },
             {
-                src: "/images/velvet-hour/V15.jpg",
+                src: "/images/velvet-hour/V15.webp",
                 alt: "Rooftop Lounge",
             },
             {
-                src: "/images/velvet-hour/V16.jpg",
+                src: "/images/velvet-hour/V16.webp",
                 alt: "Rooftop Lounge",
             },
             {
-                src: "/images/velvet-hour/V17.jpg",
+                src: "/images/velvet-hour/V17.webp",
                 alt: "Rooftop Lounge",
             },
         ],
@@ -174,12 +174,12 @@ export const venuesData: Record<string, any> = {
         name: "Billionaire Row",
         tagline: "Timeless Opulence",
         location: "Gold Coast Mansion",
-        capacity: "150 Guests",
+        capacity: "150 Guests Banquet",
         price: "$$$$$",
         description:
             "Opulence redefined. A historic mansion with manicured gardens, marble ballrooms, and an air of exclusivity that impresses every guest. Ideal for black-tie galas, luxury weddings, and executive retreats.",
         heroImage:
-            "/images/Billionaire-Row/br4.jpg",
+            "/images/iconic-venue/iconic-venue3.webp",
         matterportUrl: "https://my.matterport.com/show/?m=VBjFLC7Arur",
         videoUrl: "https://res.cloudinary.com/diu3u1hm1/video/upload/v1764848252/vv-trim_gt67yc.mp4",
         amenities: [
@@ -191,35 +191,35 @@ export const venuesData: Record<string, any> = {
         ],
         images: [
             {
-                src: "/images/Billionaire-Row/br1.jpg",
+                src: "/images/Billionaire-Row/br1.webp",
                 alt: "Grand Ballroom",
             },
             {
-                src: "/images/Billionaire-Row/br2.jpg",
+                src: "/images/Billionaire-Row/br2.webp",
                 alt: "Grand Ballroom",
             },
             {
-                src: "/images/Billionaire-Row/br3.jpg",
+                src: "/images/Billionaire-Row/br3.webp",
                 alt: "Mansion Exterior",
             },
             {
-                src: "/images/Billionaire-Row/br4.jpg",
+                src: "/images/Billionaire-Row/br4.webp",
                 alt: "Library Lounge",
             },
             {
-                src: "/images/Billionaire-Row/br5.jpg",
+                src: "/images/Billionaire-Row/br5.webp",
                 alt: "Garden Ceremony",
             },
             {
-                src: "/images/Billionaire-Row/br6.jpg",
+                src: "/images/Billionaire-Row/br6.webp",
                 alt: "Grand Ballroom",
             },
             {
-                src: "/images/Billionaire-Row/br8.jpg",
+                src: "/images/Billionaire-Row/br8.webp",
                 alt: "Grand Ballroom",
             },
             {
-                src: "/images/Billionaire-Row/br9.jpg",
+                src: "/images/Billionaire-Row/br9.webp",
                 alt: "Grand Ballroom",
             },
         ],
@@ -235,7 +235,7 @@ export const getVenuesArray = () => {
     name: venue.name,
     location: venue.location,
     capacity: venue.capacity,
-    image: venue.heroImage || venue.images?.[0]?.src || "/images/default-venue.jpg",
+    image: venue.heroImage || venue.images?.[0]?.src || "/images/default-venue.webp",
     description: venue.description,
   }));
 };

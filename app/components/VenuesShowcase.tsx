@@ -12,8 +12,8 @@ export const VenuesShowcase = () => {
 
   return (
     <section className="relative min-h-screen py-12 md:py-24 bg-black">
-      {/* Sparkles and Stars Background */}
-      <div className="absolute inset-0 overflow-hidden">
+      {/* Sparkles and Stars Background - Hidden on mobile */}
+      <div className="absolute inset-0 overflow-hidden hidden md:block">
         <div className="absolute top-30 left-20 w-20 h-20 opacity-30">
           <Sparkles className="w-full h-full text-amber-400" />
         </div>
@@ -28,7 +28,7 @@ export const VenuesShowcase = () => {
         </div>
       </div>
 
-      {/* Top decorative elements */}
+      {/* Top decorative elements - Always visible */}
       <div className='absolute top-8 md:top-16 left-4 md:left-10 lg:left-16 flex items-center gap-2 md:gap-4 z-10'>
         <div
           className='w-12 md:w-24 h-px'
@@ -37,8 +37,8 @@ export const VenuesShowcase = () => {
           }}
         ></div>
         <div className='flex items-center gap-1 md:gap-2'>
-          <Sparkles className='w-4 h-4 md:w-5 md:h-5 text-amber-400' />
-          <Star className='w-3 h-3 md:w-4 md:h-4 text-amber-400' />
+          <Sparkles className='w-4 h-4 md:w-5 md:h-5 text-amber-300' />
+          <Star className='w-3 h-3 md:w-4 md:h-4 text-amber-300' />
         </div>
       </div>
 
@@ -52,7 +52,7 @@ export const VenuesShowcase = () => {
           </div>
 
           {/* Subtitle - Simplified */}
-          <p className='text-base md:text-lg lg:text-xl text-amber-400 mb-3 font-cinzel font-light'>
+          <p className='text-base sm:text-sm md:text-md lg:text-xl text-amber-300 mb-3 font-light'>
             Discover our collection of exclusive venues, each designed to create
             unforgettable atmospheres for your most important moments.
           </p>
@@ -60,11 +60,11 @@ export const VenuesShowcase = () => {
           {/* Rating and location badge */}
           <div className="mt-4 md:mt-6 flex items-center gap-2 md:gap-3 ml-1 md:ml-2">
             <div className="flex items-center gap-1 px-2 py-1 md:px-3 md:py-1 rounded-full bg-black/80 border border-amber-400/50">
-              <Star className="w-3 h-3 md:w-4 md:h-4 text-amber-400" />
+              <Star className="w-3 h-3 md:w-4 md:h-4 text-amber-300" />
               <span className="text-xs md:text-sm font-medium text-white">Premium Rated</span>
             </div>
             <div className="flex items-center gap-1 px-2 py-1 md:px-3 md:py-1 rounded-full bg-black/80 border border-amber-400/50">
-              <MapPin className="w-3 h-3 md:w-4 md:h-4 text-amber-400" />
+              <MapPin className="w-3 h-3 md:w-4 md:h-4 text-amber-300" />
               <span className="text-xs md:text-sm font-medium text-white">Prime Locations</span>
             </div>
           </div>
@@ -73,11 +73,11 @@ export const VenuesShowcase = () => {
         <VenuesGrid onSelect={setSelectedId} />
       </div>
 
-      {/* Bottom decorative elements */}
+      {/* Bottom decorative elements - Always visible */}
       <div className='absolute bottom-8 md:bottom-16 right-4 md:right-10 lg:right-16 flex items-center gap-2 md:gap-4 z-10'>
         <div className='flex items-center gap-1 md:gap-2'>
-          <Star className='w-3 h-3 md:w-4 md:h-4 text-amber-400' />
-          <Sparkles className='w-4 h-4 md:w-5 md:h-5 text-amber-400' />
+          <Star className='w-3 h-3 md:w-4 md:h-4 text-amber-300' />
+          <Sparkles className='w-4 h-4 md:w-5 md:h-5 text-amber-300' />
         </div>
         <div
           className='w-12 md:w-24 h-px'
@@ -87,11 +87,11 @@ export const VenuesShowcase = () => {
         ></div>
       </div>
 
-      {/* Background decorative elements */}
-      <div className="absolute top-1/4 right-4 md:right-8 opacity-20 z-0">
+      {/* Background decorative elements - Hidden on mobile */}
+      <div className="absolute top-1/4 right-4 md:right-8 opacity-20 z-0 hidden md:block">
         <Star className="w-8 h-8 md:w-12 md:h-12 text-amber-400/20" />
       </div>
-      <div className="absolute bottom-1/4 left-4 md:left-8 opacity-20 z-0">
+      <div className="absolute bottom-1/4 left-4 md:left-8 opacity-20 z-0 hidden md:block">
         <Star className="w-6 h-6 md:w-10 md:h-10 text-amber-400/20" />
       </div>
 

@@ -11,6 +11,7 @@ import {
   Check,
 } from "lucide-react";
 import { AddToCartButton } from "./AddToCartButton";
+import Image from "next/image";
 
 interface Props {
   service: Service;
@@ -83,22 +84,33 @@ export default function ServicePackages({ service }: Props) {
               >
                 {/* Card */}
                 <div className="relative rounded-none overflow-hidden bg-transparent shadow-lg shadow-black/30 w-full flex flex-col">
-                  {/* Top Video Section */}
+                  {/* Top Image Section */}
                   <div className="relative h-60 md:h-80 overflow-hidden rounded-t-[100px] md:rounded-t-[140px] flex-shrink-0">
-                    {/* Video content with white border */}
+                    {/* Image content with white border */}
                     <div className="absolute inset-0 border-2 md:border-3 border-white rounded-t-[100px] md:rounded-t-[140px] z-20 pointer-events-none"></div>
                     
-                    {/* Video container inside border */}
+                    {/* Image container inside border */}
                     <div className="absolute inset-1 md:inset-2 overflow-hidden rounded-t-[100px] md:rounded-t-[140px]">
                       <div className="absolute inset-0 bg-gradient-to-b from-black/50 to-black/20 z-10" />
-                      <video
-                        src={pkg.video}
-                        autoPlay
-                        muted
-                        loop
-                        playsInline
-                        className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
-                      />
+                      <div className="relative h-full w-full">
+                        <Image
+                          src={pkg.image} // Fallback to video if image doesn't exist
+                          alt={pkg.name}
+                          fill
+                          sizes="(max-width: 768px) 100vw, 33vw"
+                          className="object-cover transition-transform duration-500 group-hover:scale-110"
+                          priority={index === 0}
+                        />
+                        {/* Fallback for missing images */}
+                        {!pkg.image && (
+                          <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-amber-900/20 to-black">
+                            <div className="text-center">
+                              <Sparkles className="h-12 w-12 mx-auto text-amber-500/50 mb-2" />
+                              <p className="text-amber-300/70 font-cinzel">Premium Experience</p>
+                            </div>
+                          </div>
+                        )}
+                      </div>
                     </div>
 
                     {/* Price badge */}
@@ -113,7 +125,7 @@ export default function ServicePackages({ service }: Props) {
 
                   {/* Bottom Content Section */}
                   <div className="relative -mt-1 p-4 md:p-5 rounded-b-none border-t-0 border border-amber-800/50 md:border-2 bg-gradient-to-b from-gray-900/90 to-black flex-grow flex flex-col">
-                    {/* Ensure border doesn't show behind video */}
+                    {/* Ensure border doesn't show behind image */}
                     <div className="absolute -top-px left-0 right-0 h-px bg-gradient-to-b from-gray-900/90 to-transparent"></div>
                     
                     {/* Package title */}
@@ -144,7 +156,7 @@ export default function ServicePackages({ service }: Props) {
                           name: `${pkg.name} - ${service.title}`,
                           type: "service",
                           price: pkg.price,
-                          image: pkg.video,
+                          image: pkg.image, // Use image if available, fallback to video
                           venueSlug: service.slug,
                         }}
                         variant="primary"

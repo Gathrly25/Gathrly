@@ -6,17 +6,7 @@ import { Sparkles, Star } from 'lucide-react';
 
 const AboutGathrly = () => {
   return (
-    <section className="relative min-h-screen overflow-hidden bg-black">
-      {/* Sparkles and Stars Background */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-10 left-10 w-24 h-24 opacity-30">
-          <Sparkles className="w-full h-full text-amber-400" />
-        </div>
-        <div className="absolute top-20 right-20 w-16 h-16 opacity-30">
-          <Star className="w-full h-full text-amber-400" />
-        </div>
-      </div>
-
+    <section className="relative min-h-screen overflow-hidden bg-black/30">
       <div className="relative z-10">
         <div className="max-w-7xl mx-auto px-6 md:px-8 lg:px-12 py-12 md:py-16">
           {/* Mobile Layout - Different order */}
@@ -26,8 +16,6 @@ const AboutGathrly = () => {
               <p className="text-white text-base leading-relaxed font-normal">
                 We take great pride in delivering an exceptional experience to our clients, combining 
                 outstanding services, delectable cuisine, and top-notch venues, all at remarkable prices. 
-                Our culinary team crafts delectable menus that cater to a variety of tastes and dietary 
-                preferences. Our venues are versatile, and adaptable to your unique vision, whether 
                 you&apos;re planning a wedding, a corporate event, or any other special occasion. 
               </p>
             </div>
@@ -38,7 +26,7 @@ const AboutGathrly = () => {
                 <h1 className="text-lg text-amber-200/80 leading-snug italic">
                   Make every moment memorable with us!
                 </h1>
-                <h2 className="text-2xl font-semibold text-amber-400 font-cinzel leading-tight">
+                <h2 className="text-2xl font-semibold font-cinzel leading-tight bg-gradient-to-r from-amber-300 via-emerald-300 to-white bg-clip-text text-transparent">
                   Where Vibrant Celebrations And Gatherings Come To Life
                 </h2>
               </div>
@@ -49,7 +37,7 @@ const AboutGathrly = () => {
               {/* Image 1 - First */}
               <div className="relative h-64 w-full overflow-hidden border border-white/10 shadow-xl">
                 <Image 
-                  src="/images/gathrly1.jpg"
+                  src="/images/gathrly1.webp"
                   alt="Elegant event venue with chandeliers"
                   fill
                   sizes="100vw"
@@ -62,7 +50,7 @@ const AboutGathrly = () => {
               {/* Image 2 - Second */}
               <div className="relative h-64 w-full overflow-hidden border border-white/10 shadow-lg">
                 <Image 
-                  src="/images/gathrly2.jpg"
+                  src="/images/gathrly2.webp"
                   alt="Wedding celebration"
                   fill
                   sizes="100vw"
@@ -74,7 +62,7 @@ const AboutGathrly = () => {
               {/* Image 3 - Third */}
               <div className="relative h-64 w-full overflow-hidden border border-white/10 shadow-lg">
                 <Image 
-                  src="/images/gathrly3.jpg"
+                  src="/images/gathrly3.webp"
                   alt="Corporate event"
                   fill
                   sizes="100vw"
@@ -86,7 +74,7 @@ const AboutGathrly = () => {
 
             {/* Fourth: Second paragraph (appears last on mobile) */}
             <div className="mt-6">
-              <p className="text-white text-base leading-relaxed font-normal">
+              <p className="text-stone-400 text-base leading-relaxed font-normal">
                 Aura Grande takes pride in offering premier experiences to the people of the twin cities, 
                 redefining event hosting with a wide array of versatile venues. Our magnificent marquees, 
                 wedding halls, and spacious open-air lawns are the perfect canvas for weddings, corporate 
@@ -95,7 +83,7 @@ const AboutGathrly = () => {
             </div>
           </div>
 
-          {/* Desktop Layout - EXACTLY as before, unchanged */}
+          {/* Desktop Layout */}
           <div className="hidden lg:block">
             {/* Top Section: Text headings */}
             <div className="grid grid-cols-2 gap-14 mb-8">
@@ -105,7 +93,7 @@ const AboutGathrly = () => {
                   <h1 className="text-base text-amber-200/80 leading-snug italic">
                     Make every moment memorable with us!
                   </h1>
-                  <h2 className="text-4xl md:text-5xl font-bold text-amber-400 font-cinzel">
+                  <h2 className="text-4xl md:text-5xl font-bold font-cinzel bg-gradient-to-r from-amber-300 via-white to-lime-400 bg-clip-text text-transparent">
                     Where Vibrant Celebrations And Gathering Come Life
                   </h2>
                 </div>
@@ -113,7 +101,7 @@ const AboutGathrly = () => {
 
               {/* Right side paragraph */}
               <div className="flex items-start mt-8">
-                <p className="text-white text-base leading-relaxed font-normal">
+                <p className="text-stone-200 text-base leading-relaxed font-normal">
                   We take great pride in delivering an exceptional experience to our clients, combining 
                   outstanding services, delectable cuisine, and top-notch venues, all at remarkable prices. 
                   Our culinary team crafts delectable menus that cater to a variety of tastes and dietary 
@@ -127,17 +115,15 @@ const AboutGathrly = () => {
             <div className="grid grid-cols-2 gap-14">
               {/* Left Section - Single large image */}
               <div className="space-y-6">
-                <div className="relative h-[250px] md:h-[300px] lg:h-[350px] overflow-hidden border border-white/10 shadow-xl">
+                <div className="relative h-[250px] md:h-[300px] lg:h-[350px] overflow-hidden border border-white/10">
                   <Image 
-                    src="/images/gathrly1.jpg"
+                    src="/images/gathrly1.webp"
                     alt="Elegant event venue with chandeliers"
                     fill
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     className="object-cover"
                     priority
                   />
-                  {/* Overlay for better text readability */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
                 </div>
               </div>
 
@@ -146,33 +132,31 @@ const AboutGathrly = () => {
                 {/* Two images grid on top */}
                 <div className="grid grid-cols-2 gap-6">
                   {/* First image */}
-                  <div className="relative h-48 overflow-hidden border border-white/10 shadow-lg">
+                  <div className="relative h-48 overflow-hidden border border-white/10">
                     <Image 
-                      src="/images/gathrly2.jpg"
+                      src="/images/gathrly2.webp"
                       alt="Wedding celebration"
                       fill
                       sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 50vw, 25vw"
                       className="object-cover"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
                   </div>
                   
                   {/* Second image */}
-                  <div className="relative h-48 overflow-hidden border border-white/10 shadow-lg">
+                  <div className="relative h-48 overflow-hidden border border-white/10">
                     <Image 
-                      src="/images/gathrly3.jpg"
+                      src="/images/gathrly3.webp"
                       alt="Corporate event"
                       fill
                       sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 50vw, 25vw"
                       className="object-cover"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
                   </div>
                 </div>
 
                 {/* Bottom paragraph (stays in right column on desktop) */}
                 <div className="space-y-6">
-                  <p className="text-white text-base leading-relaxed font-normal">
+                  <p className="text-stone-200 text-base leading-relaxed font-normal">
                     Aura Grande takes pride in offering premier experiences to the people of the twin cities, 
                     redefining event hosting with a wide array of versatile venues. Our magnificent marquees, 
                     wedding halls, and spacious open-air lawns are the perfect canvas for weddings, corporate 

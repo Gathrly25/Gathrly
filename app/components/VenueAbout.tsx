@@ -13,23 +13,23 @@ export const VenueAbout = ({ venue }: Props) => {
   return (
     <section className="mb-16 text-center relative bg-black">
       {/* Decorative elements - Increased opacity */}
-      <div className="absolute -top-4 left-0 opacity-30">
+      <div className="absolute -top-4 sm:-top-8 md:-top-4 left-0 opacity-30">
         <Sparkles className="w-12 h-12 text-amber-400" />
       </div>
-      <div className="absolute -top-4 right-0 opacity-30">
+      <div className="absolute -top-4 sm:-top-8 md:-top-4 right-0 opacity-30">
         <Star className="w-10 h-10 text-amber-400" />
       </div>
       
       <div className="relative w-full mb-8">
-        <div className="absolute top-0 left-0 w-24 h-1 bg-gradient-to-r from-amber-500 to-amber-300 rounded-full"></div>
-        <div className="absolute bottom-0 right-0 w-24 h-1 bg-gradient-to-r from-amber-300 to-amber-500 rounded-full"></div>
+        <div className="absolute top-0 left-0 w-24 h-1 bg-gradient-to-r from-amber-500 to-amber-300 rounded-full hidden sm:block"></div>
+        <div className="absolute bottom-0 right-0 w-24 h-1 bg-gradient-to-r from-amber-300 to-amber-500 rounded-full hidden sm:block"></div>
         
         <div className="flex items-center justify-center gap-3 mb-3">
-          <Quote className="w-6 h-6 text-amber-400 rotate-180" />
+          <Quote className="w-6 h-6 text-amber-400 rotate-180 hidden sm:block" />
           <h1 className="text-4xl md:text-5xl font-bold text-white font-cinzel">
             ABOUT THE VENUE
           </h1>
-          <Quote className="w-6 h-6 text-amber-400" />
+          <Quote className="w-6 h-6 text-amber-400 hidden sm:block" />
         </div>
         
         <p className="text-sm font-semibold uppercase tracking-widest text-amber-300 font-cinzel">

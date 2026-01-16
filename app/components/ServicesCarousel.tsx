@@ -9,10 +9,10 @@ const infiniteServices = [...services, ...services];
 
 const ServicesCarousel = () => {
   return (
-    <section className="h-screen flex flex-col justify-center bg-black relative overflow-hidden mt-5">
+    <section className="h-screen flex flex-col justify-center bg-black relative overflow-hidden mt-0 sm:mt-2 md:mt-5">
       
       {/* Background Sparkles and Stars */}
-      <div className="absolute inset-0 overflow-hidden">
+      <div className="absolute inset-0 overflow-hidden hidden sm:block">
         <div className="absolute top-20 left-10 w-12 h-12 opacity-30">
           <Sparkles className="w-full h-full text-amber-400" />
         </div>
@@ -36,27 +36,28 @@ const ServicesCarousel = () => {
         </div>
 
         {/* Subtitle */}
-        <p className='text-lg text-amber-400 font-light ml-2 font-cinzel'>
-          Premium services crafted for unforgettable experiences
+        <p className='text-lg text-amber-300 font-light ml-2'>
+          Premium Services Crafted For Unforgettable Experiences
         </p>
       </div>
 
       {/* CAROUSEL */}
-      <div className='relative overflow-hidden'>
+      <div className='relative overflow-hidden px-4'>
         <motion.div
           animate={{ x: ["0%", "-50%"] }}
           transition={{
-            duration: 40,
+            duration: 20,
             ease: "linear",
             repeat: Infinity,
           }}
-          className='flex gap-4 md:gap-5 lg:gap-6 px-4'
+          className='flex gap-5 md:gap-6 lg:gap-8 px-4'
         >
           {infiniteServices.map((service, index) => (
             <div 
               key={`${service.id}-${index}`} 
-              className="min-w-[300px] md:min-w-[350px]"
+              className=" relative group"
             >
+              <div className="absolute -inset-1 bg-gradient-to-r from-amber-600/0 via-amber-500/0 to-amber-400/0 rounded-2xl opacity-0 group-hover:opacity-20 blur-sm transition-opacity duration-500"></div>
               <ServiceCard {...service} />
             </div>
           ))}

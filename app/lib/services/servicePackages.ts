@@ -1,6 +1,6 @@
 export interface ServicePackage {
   name: string;
-  video: string; // 🎥 video instead of image
+  image: string; // 🎥 video instead of image
   price: number; 
   features: string[];
 }
@@ -9,7 +9,7 @@ export const servicePackages: Record<string, ServicePackage[]> = {
   "event-design": [
     {
       name: "Silver Package",
-      video: "/videos/packages/service1.mp4",
+      image: "/images/service1.webp",
       price: 750,
       features: [
         "Elegant venue decoration",
@@ -21,7 +21,7 @@ export const servicePackages: Record<string, ServicePackage[]> = {
     },
     {
       name: "Gold Package",
-      video: "/videos/packages/service2.mp4",
+      image: "/images/service2.webp",
       price: 1500,
       features: [
         "Custom theme décor",
@@ -33,7 +33,7 @@ export const servicePackages: Record<string, ServicePackage[]> = {
     },
     {
       name: "Diamond Package",
-      video: "/videos/packages/service3.mp4",
+      image: "/images/service3.webp",
       price: 2500,
       features: [
         "Luxury customized décor",
@@ -48,7 +48,7 @@ export const servicePackages: Record<string, ServicePackage[]> = {
   "lighting-visuals": [
     {
       name: "Silver Package",
-      video: "/videos/packages/service4.mp4",
+      image: "/images/service1.webp",
       price: 600,
       features: [
         "Basic venue lighting",
@@ -59,7 +59,7 @@ export const servicePackages: Record<string, ServicePackage[]> = {
     },
     {
       name: "Gold Package",
-      video: "/videos/packages/service1.mp4",
+      image: "/images/service2.webp",
       price: 1200,
       features: [
         "Dynamic stage lighting",
@@ -70,7 +70,7 @@ export const servicePackages: Record<string, ServicePackage[]> = {
     },
     {
       name: "Diamond Package",
-      video: "/videos/packages/service2.mp4",
+      image: "/images/service3.webp",
       price: 2000,
       features: [
         "Fully programmed light show",
@@ -84,7 +84,7 @@ export const servicePackages: Record<string, ServicePackage[]> = {
   "sound-engineering": [
     {
       name: "Silver Package",
-      video: "/videos/packages/service3.mp4",
+      image: "/images/service1.webp",
       price: 500,
       features: [
         "Basic PA system",
@@ -94,7 +94,7 @@ export const servicePackages: Record<string, ServicePackage[]> = {
     },
     {
       name: "Gold Package",
-      video: "/videos/packages/service4.mp4",
+      image: "/images/service2.webp",
       price: 1000,
       features: [
         "High-quality sound system",
@@ -105,7 +105,7 @@ export const servicePackages: Record<string, ServicePackage[]> = {
     },
     {
       name: "Diamond Package",
-      video: "/videos/packages/service1.mp4",
+      image: "/images/service3.webp",
       price: 1800,
       features: [
         "Concert-grade sound",
@@ -119,7 +119,7 @@ export const servicePackages: Record<string, ServicePackage[]> = {
   "stage-production": [
     {
       name: "Silver Package",
-      video: "/videos/packages/service2.mp4",
+      image: "/images/service1.webp",
       price: 800,
       features: [
         "Standard stage setup",
@@ -129,7 +129,7 @@ export const servicePackages: Record<string, ServicePackage[]> = {
     },
     {
       name: "Gold Package",
-      video: "/videos/packages/service3.mp4",
+      image: "/images/service2.webp",
       price: 1600,
       features: [
         "Custom stage design",
@@ -140,7 +140,7 @@ export const servicePackages: Record<string, ServicePackage[]> = {
     },
     {
       name: "Diamond Package",
-      video: "/videos/packages/service4.mp4",
+      image: "/images/service3.webp",
       price: 2800,
       features: [
         "Luxury stage production",
@@ -169,7 +169,7 @@ export const eventServices: EventService[] = [
     id: 1,
     title: "Event Venue",
     description: "Choose from our premium event venues to make your celebration unforgettable.",
-    image: "/images/service1.jpg",
+    image: "/images/service1.webp",
     price: 2500,
     services: [
       { icon: "MapPin", text: "Prime locations" },
@@ -182,7 +182,7 @@ export const eventServices: EventService[] = [
     id: 2,
     title: "Catering Service",
     description: "Delicious menus and expert catering staff for all occasions.",
-    image: "/images/service2.jpg",
+    image: "/images/service2.webp",
     price: 1500,
     services: [
       { icon: "Coffee", text: "Beverages & drinks" },
@@ -193,9 +193,9 @@ export const eventServices: EventService[] = [
   },
   {
     id: 3,
-    title: "Music & DJ",
-    description: "Professional DJs and music setups to energize your event.",
-    image: "/images/service3.jpg",
+    title: "Food & Beverages",
+    description: " Exquisite food and beverage options tailored to your event needs.",
+    image: "/images/service3.webp",
     price: 1200,
     services: [
       { icon: "Music", text: "Live DJ performances" },
@@ -208,7 +208,7 @@ export const eventServices: EventService[] = [
     id: 4,
     title: "Photo & Videography",
     description: "Capture every moment with our expert photography and videography services.",
-    image: "/images/service4.jpg",
+    image: "/images/service4.webp",
     price: 1800,
     services: [
       { icon: "Camera", text: "Professional photography" },

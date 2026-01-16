@@ -38,6 +38,7 @@ const ServiceCard = ({ title, description, image, slug }: Props) => {
           transition-transform duration-700
         "
       />
+      <div className="absolute inset-0 bg-black20" />
 
       {/* CONTENT */}
       <div className="relative z-10 h-full p-6 sm:p-7 lg:p-8 flex flex-col justify-between">
