@@ -16,7 +16,7 @@ export const services: Service[] = [
     description: "Immersive environments crafted with precision.",
     longDescription:
       "Our event design service focuses on creating immersive, memorable environments that align perfectly with your vision.",
-    image: "/images/service1.jpg",
+    image: "/images/service1.webp",
   },
   {
     id: 2,
@@ -25,16 +25,16 @@ export const services: Service[] = [
     description: "Cinematic lighting that elevates every moment.",
     longDescription:
       "We design cinematic lighting and visual systems that enhance emotion and atmosphere.",
-    image: "/images/service2.jpg",
+    image: "/images/service2.webp",
   },
   {
     id: 3,
-    title: "Sound Engineering",
-    slug: "sound-engineering",
-    description: "Crystal-clear audio experiences.",
+    title: "Food & Catering",
+    slug: "food-catering",
+    description: "Delicious cuisine tailored to your event.",
     longDescription:
-        "Our sound engineering service ensures crystal-clear audio experiences tailored to your event's needs.",
-    image: "/images/service3.jpg",
+        "Our culinary team creates delicious, tailored menus for every event.",
+    image: "/images/service3.webp",
   },
   {
     id: 4,
@@ -43,7 +43,7 @@ export const services: Service[] = [
     description: "High-impact staging and production systems.",
     longDescription:
       "We provide high-impact staging and production systems that captivate audiences.",
-    image: "/images/service4.jpg",
+    image: "/images/service4.webp",
   },
 ];
 

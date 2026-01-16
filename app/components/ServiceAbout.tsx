@@ -72,7 +72,7 @@ export default function ServiceAbout() {
           />
 
           {/* ROW 1 - IMAGE */}
-          <ImageBlock src="/images/aboutService1.jpg" />
+          <ImageBlock src="/images/about-img1.webp" />
 
           {/* ROW 1 - TEXT */}
           <TextBlock
@@ -81,7 +81,7 @@ export default function ServiceAbout() {
           />
 
           {/* ROW 2 - IMAGE */}
-          <ImageBlock src="/images/aboutService2.jpg" />
+          <ImageBlock src="/images/about-img2.webp" />
 
           {/* ROW 2 - TEXT */}
           <TextBlock
@@ -90,7 +90,7 @@ export default function ServiceAbout() {
           />
 
           {/* ROW 2 - IMAGE */}
-          <ImageBlock src="/images/aboutService4.jpg" />
+          <ImageBlock src="/images/about-img3.webp" />
         </div>
       </div>
     </section>
@@ -110,7 +110,7 @@ function TextBlock({
   return (
     <div className="flex flex-col items-center justify-center p-4 md:p-6 text-center h-[220px] md:h-[280px] bg-black/50 rounded-lg border border-amber-400/20">
       {/* Icon Container */}
-      <div className="mb-3 md:mb-4 text-amber-400">
+      <div className="mb-3 md:mb-4 text-amber-300">
         {icon}
       </div>
 

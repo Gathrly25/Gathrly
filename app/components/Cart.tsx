@@ -18,7 +18,7 @@ export const Cart = () => {
       {/* Cart Toggle Button */}
       <button
         onClick={() => setIsOpen(true)}
-        className="fixed bottom-6 right-6 z-40 flex items-center gap-2 rounded-full bg-black px-6 py-3 text-white shadow-2xl hover:scale-105 transition-transform"
+        className="fixed bottom-6 right-6 z-40 flex items-center gap-2 rounded-full bg-black px-6 py-3 text-white shadow-2xl hover:scale-105 transition-transform duration-200"
       >
         <ShoppingCart className="h-5 w-5" />
         <span className="font-bold">Cart</span>
@@ -33,21 +33,27 @@ export const Cart = () => {
       <AnimatePresence>
         {isOpen && (
           <>
-            {/* Backdrop */}
+            {/* Backdrop - Faster animation */}
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
+              transition={{ duration: 0.15, ease: "easeInOut" }}
               onClick={() => setIsOpen(false)}
               className="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm"
             />
 
-            {/* Sidebar */}
+            {/* Sidebar - Faster animation with lighter spring */}
             <motion.div
               initial={{ x: '100%' }}
               animate={{ x: 0 }}
               exit={{ x: '100%' }}
-              transition={{ type: 'spring', damping: 30 }}
+              transition={{ 
+                type: 'spring', 
+                stiffness: 300, 
+                damping: 30,
+                mass: 0.5 
+              }}
               className="fixed right-0 top-0 z-50 h-full w-full max-w-md bg-white shadow-2xl"
             >
               <div className="flex h-full flex-col">
@@ -64,14 +70,14 @@ export const Cart = () => {
                   </div>
                   <button
                     onClick={() => setIsOpen(false)}
-                    className="rounded-full p-2 hover:bg-stone-100"
+                    className="rounded-full p-2 hover:bg-stone-100 transition-colors duration-150"
                     aria-label="Close cart"
                   >
                     <X className="h-5 w-5" />
                   </button>
                 </div>
 
-                {/* Items List */}
+                {/* Items List - Faster item animations */}
                 <div className="flex-1 overflow-y-auto p-6">
                   {items.length === 0 ? (
                     <div className="flex h-full flex-col items-center justify-center text-center">
@@ -85,9 +91,10 @@ export const Cart = () => {
                         <motion.div
                           key={item.id}
                           layout
-                          initial={{ opacity: 0, y: 20 }}
+                          initial={{ opacity: 0, y: 10 }}
                           animate={{ opacity: 1, y: 0 }}
-                          exit={{ opacity: 0, scale: 0.9 }}
+                          exit={{ opacity: 0, scale: 0.95 }}
+                          transition={{ duration: 0.2 }}
                           className="rounded-xl border border-stone-200 p-4"
                         >
                           <div className="flex items-start justify-between">
@@ -132,7 +139,7 @@ export const Cart = () => {
                             <div className="flex flex-col items-end gap-2">
                               <button
                                 onClick={() => removeFromCart(item.id)}
-                                className="rounded-full p-2 text-stone-400 hover:bg-red-50 hover:text-red-500"
+                                className="rounded-full p-2 text-stone-400 hover:bg-red-50 hover:text-red-500 transition-colors duration-150"
                                 aria-label="Remove item"
                               >
                                 <Trash2 className="h-4 w-4" />
@@ -140,7 +147,7 @@ export const Cart = () => {
                               <div className="flex items-center gap-2">
                                 <button
                                   onClick={() => updateQuantity(item.id, item.quantity - 1)}
-                                  className="rounded-full bg-stone-100 p-1 hover:bg-stone-200"
+                                  className="rounded-full bg-stone-100 p-1 hover:bg-stone-200 transition-colors duration-150"
                                   aria-label="Decrease quantity"
                                 >
                                   <Minus className="h-3 w-3" />
@@ -148,7 +155,7 @@ export const Cart = () => {
                                 <span className="w-8 text-center font-bold">{item.quantity}</span>
                                 <button
                                   onClick={() => updateQuantity(item.id, item.quantity + 1)}
-                                  className="rounded-full bg-stone-100 p-1 hover:bg-stone-200"
+                                  className="rounded-full bg-stone-100 p-1 hover:bg-stone-200 transition-colors duration-150"
                                   aria-label="Increase quantity"
                                 >
                                   <Plus className="h-3 w-3" />
@@ -164,7 +171,12 @@ export const Cart = () => {
 
                 {/* Footer */}
                 {items.length > 0 && (
-                  <div className="border-t border-stone-200 p-6">
+                  <motion.div 
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.2 }}
+                    className="border-t border-stone-200 p-6"
+                  >
                     <div className="mb-6 space-y-3">
                       <div className="flex items-center justify-between">
                         <span className="text-stone-600">Subtotal</span>
@@ -183,14 +195,14 @@ export const Cart = () => {
                     <div className="flex gap-3">
                       <button
                         onClick={clearCart}
-                        className="flex-1 rounded-full border border-stone-300 py-3 font-bold text-stone-600 hover:bg-stone-50"
+                        className="flex-1 rounded-full border border-stone-300 py-3 font-bold text-stone-600 hover:bg-stone-50 transition-colors duration-150"
                       >
                         Clear All
                       </button>
                       <Link
                         href="/checkout"
                         onClick={() => setIsOpen(false)}
-                        className="flex flex-1 items-center justify-center gap-2 rounded-full bg-black py-3 font-bold text-white hover:scale-[1.02] transition-transform"
+                        className="flex flex-1 items-center justify-center gap-2 rounded-full bg-black py-3 font-bold text-white hover:scale-[1.02] transition-all duration-200"
                       >
                         Proceed to Checkout <ArrowRight className="h-4 w-4" />
                       </Link>
@@ -199,7 +211,7 @@ export const Cart = () => {
                     <p className="mt-4 text-center text-sm text-stone-500">
                       Need help? <a href="tel:+15551234567" className="font-bold hover:underline">Call our team</a>
                     </p>
-                  </div>
+                  </motion.div>
                 )}
               </div>
             </motion.div>

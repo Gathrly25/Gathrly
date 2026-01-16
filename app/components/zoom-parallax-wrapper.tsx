@@ -18,31 +18,31 @@ export default function ZoomParallaxWrapper() {
 
   const images = [
     {
-      src: "/parallex-image/parallex-img1.jpg",
+      src: "/images/Billionaire-Row/br10.webp",
       alt: "Lofte image 1",
     },
     {
-      src: "/parallex-image/parallex-img2.jpg",
+      src: "/images/Billionaire-Row/br7.webp",
       alt: "Lofte image 2",
     },
     {
-      src: "/parallex-image/parallex-img3.jpg",
+      src: "/images/Billionaire-Row/br1.webp",
       alt: "Lofte Image 3",
     },
     {
-      src: "/parallex-image/parallex-img4.jpg",
+      src: "/images/Billionaire-Row/br2.webp",
       alt: "VVH1 Image",
     },
     {
-      src: "/parallex-image/parallex-img5.jpg",
+      src: "/images/Billionaire-Row/br3.webp",
       alt: "VVH2 Image",
     },
     {
-      src: "/parallex-image/parallex-img6.jpg",
+      src: "/images/Billionaire-Row/br6.webp",
       alt: "VVH3 Image",
     },
     {
-      src: "/parallex-image/parallex-img7.jpg",
+      src: "/images/Billionaire-Row/br11.webp",
       alt: "VVH4 Image",
     },
   ];

@@ -7,22 +7,25 @@ import {
   Building, 
   UtensilsCrossed
 } from "lucide-react";
+import Image from "next/image";
 
 const GathrlyShowcase = () => {
   return (
     <section className="relative h-screen w-full overflow-hidden bg-black mb-8 lg:mb-10">
-      {/* Full Screen Video Background */}
+      {/* Full Screen Image Background */}
       <div className="absolute inset-0">
-        <video
-          src="/videos/gathrlyShowcase.mp4"
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="w-full h-full object-cover"
-        />
-        {/* Darker overlay for better text readability */}
-        <div className="absolute inset-0 bg-black/10" />
+        <div className="relative w-full h-full">
+          <Image
+            src="/images/gallery.webp" // Update with your image path
+            alt="Gathrly Event Venue"
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover"
+          />
+          {/* Gradient overlay for better text readability */}
+          <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-black/20 to-black/10" />
+        </div>
       </div>
 
       {/* Main Content Container */}
@@ -32,7 +35,8 @@ const GathrlyShowcase = () => {
         <div className="w-full lg:w-1/2 z-20 mt-8 lg:mt-16 px-4 lg:px-0">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
-            animate={{ opacity: 1, x: 0 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.6 }}
             className="max-w-lg mx-auto lg:mx-0"
           >
@@ -46,7 +50,8 @@ const GathrlyShowcase = () => {
             {/* Main Heading */}
             <motion.h1
               initial={{ opacity: 0, x: -40 }}
-              animate={{ opacity: 1, x: 0 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.8, delay: 0.2 }}
               className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold font-cinzel text-center lg:text-left"
             >
@@ -61,7 +66,8 @@ const GathrlyShowcase = () => {
             {/* Decorative Sparkle */}
             <motion.div
               initial={{ opacity: 0, scale: 0 }}
-              animate={{ opacity: 1, scale: 1 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.6, delay: 0.4 }}
               className="mt-4 lg:mt-6 hidden lg:block"
             >
@@ -74,7 +80,8 @@ const GathrlyShowcase = () => {
         <div className="w-full lg:w-1/2 z-20 mt-12 lg:mt-16 px-4 lg:px-0">
           <motion.div
             initial={{ opacity: 0, x: 30 }}
-            animate={{ opacity: 1, x: 0 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.8, delay: 0.3 }}
             className="max-w-xl mx-auto lg:mx-0"
           >

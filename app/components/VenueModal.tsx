@@ -2,7 +2,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { X } from "lucide-react";
 import { VenueModalContent } from "./VenueModalContent";
 import Image from "next/image";
-import { getVenuesArray } from "../lib/venues/venues.data"; // Import the helper function
+import { getVenuesArray } from "../lib/venues/venues.data";
 
 interface Props {
   selectedId: number | null;
@@ -11,7 +11,6 @@ interface Props {
 }
 
 export const VenueModal = ({ selectedId, onClose, onExplore }: Props) => {
-  // Use the helper function to get venues as array
   const venuesArray = getVenuesArray();
   const venue = venuesArray.find((v) => v.id === selectedId);
   
@@ -19,7 +18,7 @@ export const VenueModal = ({ selectedId, onClose, onExplore }: Props) => {
 
   return (
     <AnimatePresence>
-      <div className="fixed inset-0 z-50 flex items-center justify-center px-4">
+      <div className="fixed inset-0 z-50 flex items-center justify-center px-6 sm:px-6 md:px-4">
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -30,30 +29,34 @@ export const VenueModal = ({ selectedId, onClose, onExplore }: Props) => {
 
         <motion.div
           layoutId={`card-${venue.id}`}
-          className="relative w-full max-w-4xl overflow-hidden rounded-3xl bg-white shadow-2xl"
+          className="relative w-full max-w-md overflow-hidden rounded-xl bg-white shadow-xl"
         >
           <button
             onClick={onClose}
-            className="absolute right-6 top-6 z-10 rounded-full bg-white/20 p-2 text-white backdrop-blur-md hover:bg-white hover:text-black"
+            className="absolute right-3 top-3 z-20 rounded-full bg-black/40 p-1.5 text-white backdrop-blur-sm hover:bg-black/60"
           >
-            <X className="h-6 w-6" />
+            <X className="h-4 w-4" />
           </button>
 
-          <div className="grid grid-cols-1 md:grid-cols-2">
-            <div className="relative h-[300px] md:h-[600px]">
-              <Image
-                src={venue.image}
-                alt={venue.name}
-                fill
-                className="object-cover"
-                sizes="(min-width: 768px) 50vw, 100vw"
+          {/* Image as background */}
+          <div className="relative h-[300px] w-full overflow-hidden md:h-[350px]">
+            <Image
+              src={venue.image}
+              alt={venue.name}
+              fill
+              className="object-cover"
+              sizes="(min-width: 768px) 40vw, 100vw"
+              priority
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
+            
+            {/* Text box overlay */}
+            <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 mx-3 w-11/12 max-w-xs rounded-xl bg-white/95 backdrop-blur-sm shadow-lg mb-4">
+              <VenueModalContent
+                venue={venue}
+                onExplore={() => onExplore(venue.slug)}
               />
             </div>
-
-            <VenueModalContent
-              venue={venue}
-              onExplore={() => onExplore(venue.slug)}
-            />
           </div>
         </motion.div>
       </div>
