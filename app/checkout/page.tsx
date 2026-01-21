@@ -244,6 +244,10 @@ export default function CheckoutPage() {
                         <span className="text-white/70">Contact:</span>
                         <span className="text-white font-medium">{bookingData?.fullName}</span>
                       </div>
+                       <div className="flex justify-between">
+                        <span className="text-white/70">Address:</span>
+                        <span className="text-white font-medium">{bookingData?.address}</span>
+                      </div>
                       <div className="flex justify-between">
                         <span className="text-white/70">Email:</span>
                         <span className="text-white font-medium text-sm truncate">{bookingData?.email}</span>

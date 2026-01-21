@@ -3,7 +3,7 @@
 
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Calendar, Users, Mail, Phone, Check, ArrowRight, Loader2, User, MessageSquare } from "lucide-react";
+import { Calendar, Users, Mail, Phone, Check, ArrowRight, Loader2, User, MessageSquare, MapPin } from "lucide-react";
 import { cn } from "../lib/utils";
 
 interface BookingFormProps {
@@ -16,6 +16,7 @@ interface BookingFormData {
   eventDate: string;
   fullName: string;
   email: string;
+  address: string;
   phone: string;
   additionalDetails: string;
 }
@@ -31,6 +32,7 @@ export const BookingForm = ({ onSubmitComplete }: BookingFormProps) => {
     eventDate: "",
     fullName: "",
     email: "",
+    address: "",
     phone: "",
     additionalDetails: ""
   });
@@ -45,7 +47,7 @@ export const BookingForm = ({ onSubmitComplete }: BookingFormProps) => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
-    if (!formData.guestCount || !formData.eventDate || !formData.fullName || !formData.email || !formData.phone) {
+    if (!formData.guestCount || !formData.eventDate || !formData.fullName || !formData.email || !formData.address || !formData.phone) {
       alert("Please fill in all required fields.");
       return;
     }
@@ -73,6 +75,7 @@ export const BookingForm = ({ onSubmitComplete }: BookingFormProps) => {
       eventDate: "",
       fullName: "",
       email: "",
+      address: "",
       phone: "",
       additionalDetails: ""
     });
@@ -111,6 +114,9 @@ export const BookingForm = ({ onSubmitComplete }: BookingFormProps) => {
             </p>
             <p className="text-white/80">
               <span className="font-medium text-amber-200">Date:</span> {formData.eventDate}
+            </p>
+            <p className="text-white/80">
+              <span className="font-medium text-amber-200">Address:</span> {formData.address}
             </p>
           </div>
         </div>
@@ -266,6 +272,23 @@ export const BookingForm = ({ onSubmitComplete }: BookingFormProps) => {
                 </div>
               </div>
 
+              <div className="space-y-1.5">
+                <label className="text-[10px] font-bold uppercase tracking-wider text-amber-300">
+                  Event Address
+                </label>
+                <div className="relative">
+                  <MapPin className="absolute left-2 top-1/2 -translate-y-1/2 h-3 w-3 text-amber-400" />
+                  <input
+                    type="text"
+                    placeholder="Full venue address"
+                    value={formData.address}
+                    onChange={(e) => handleInputChange("address", e.target.value)}
+                    className="w-full rounded border border-white/20 bg-white/5 p-2 pl-7 text-xs font-medium text-white placeholder-white/50 outline-none focus:border-amber-400 focus:ring-1 focus:ring-amber-400"
+                    required
+                  />
+                </div>
+              </div>
+
               <div className="grid grid-cols-2 gap-2">
                 <div className="space-y-1.5">
                   <label className="text-[10px] font-bold uppercase tracking-wider text-amber-300">
@@ -312,7 +335,7 @@ export const BookingForm = ({ onSubmitComplete }: BookingFormProps) => {
                 <button
                   type="button"
                   onClick={() => {
-                    if (!formData.fullName || !formData.email || !formData.phone) {
+                    if (!formData.fullName || !formData.email || !formData.phone || !formData.address) {
                       alert("Please fill in all contact information.");
                       return;
                     }
@@ -356,6 +379,7 @@ export const BookingForm = ({ onSubmitComplete }: BookingFormProps) => {
                   <p><span className="font-medium text-amber-200">Event:</span> {formData.eventType}</p>
                   <p><span className="font-medium text-amber-200">Guests:</span> {formData.guestCount}</p>
                   <p><span className="font-medium text-amber-200">Date:</span> {formData.eventDate}</p>
+                  <p><span className="font-medium text-amber-200">Address:</span> {formData.address}</p>
                 </div>
               </div>
 
