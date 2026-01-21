@@ -24,7 +24,7 @@ const GathrlyShowcase = () => {
             className="object-cover"
           />
           {/* Gradient overlay for better text readability */}
-          <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-black/20 to-black/10" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/70 to-black/90" />
         </div>
       </div>
 
