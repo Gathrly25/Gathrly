@@ -79,8 +79,8 @@ export const Footer = () => {
                 <div className="mt-24 flex flex-col items-center justify-between border-t border-white/10 pt-8 text-sm text-stone-500 md:flex-row">
                     <p>© 2025 Gathrly Inc. All rights reserved.</p>
                     <div className="mt-4 flex gap-6 md:mt-0">
-                        <a href="#" className="hover:text-white">Privacy Policy</a>
-                        <a href="#" className="hover:text-white">Terms of Service</a>
+                        <a href="/privacy-policy" className="hover:text-white">Privacy Policy</a>
+                        <a href="/terms-conditions" className="hover:text-white">Terms of Service</a>
                     </div>
                 </div>
 
