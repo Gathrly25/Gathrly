@@ -12,8 +12,8 @@ export const Footer = () => {
                     <div className="flex flex-col justify-between">
                         <div>
                             <h2 className="text-2xl font-bold tracking-tighter">Gathrly.</h2>
-                            <p className="mt-4 max-w-xs text-stone-400">
-                                Curating exceptional spaces for your most memorable moments.
+                            <p className="mt-4 max-w-xl text-stone-400">
+                                Event management agency that provides venues for your events along with catering and bar services.
                             </p>
                         </div>
 
@@ -22,10 +22,10 @@ export const Footer = () => {
                                 Get in touch
                             </span>
                             <a
-                                href="mailto:hello@gathrly.com"
+                                href="mailto:info@gathrly.com"
                                 className="mt-2 block text-3xl font-bold transition-colors hover:text-stone-300 md:text-5xl"
                             >
-                                hello@gathrly.com
+                                info@gathrly.com
                             </a>
                         </div>
                     </div>
