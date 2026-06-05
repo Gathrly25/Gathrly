@@ -4,12 +4,12 @@ export const venuesData: Record<string, any> = {
         name: "Lofte 23",
         tagline: "Industrial Elegance Reimagined",
         location: "Downtown Arts District",
-        capacity: "500 Guests Banquet",
+        capacity: "200 Guests Banquet",
         price: "$$$",
         description:
             "Lofte 23 is a raw, industrial masterpiece featuring exposed brick, soaring timber beams, and panoramic city views. The perfect canvas for bold, modern events. This space transforms seamlessly from a daylight-filled gallery to a moody, atmospheric evening venue.",
         heroImage:
-            "/images/iconic-venue/iconic-venue1.webp", // Added leading slash
+            "/images/Lofte23/L17.webp", 
         amenities: [
             "Rooftop Access",
             "Bridal Suite",
@@ -87,12 +87,12 @@ export const venuesData: Record<string, any> = {
         name: "Velvet Hour",
         tagline: "Sophistication Above the City",
         location: "West Loop Rooftop",
-        capacity: "250 Guests Banquet",
+        capacity: "220 Guests Banquet",
         price: "$$$$",
         description:
             "An ultra-chic rooftop lounge oozing sophistication. Floor-to-ceiling glass, plush velvet interiors, and a sunset view that steals the show. Velvet Hour is designed for intimate gatherings and high-profile social events where style is paramount.",
         heroImage:
-            "/images/iconic-venue/iconic-venue2.webp",
+            "/images/velvet-hour/V11.webp",
         amenities: [
             "Private Bar",
             "Outdoor Terrace",
@@ -174,12 +174,12 @@ export const venuesData: Record<string, any> = {
         name: "Billionaire Row",
         tagline: "Timeless Opulence",
         location: "Gold Coast Mansion",
-        capacity: "150 Guests Banquet",
+        capacity: "300 Guests Banquet",
         price: "$$$$$",
         description:
             "Opulence redefined. A historic mansion with manicured gardens, marble ballrooms, and an air of exclusivity that impresses every guest. Ideal for black-tie galas, luxury weddings, and executive retreats.",
         heroImage:
-            "/images/iconic-venue/iconic-venue3.webp",
+            "/images/Billionaire-Row/br4.webp",
         matterportUrl: "https://my.matterport.com/show/?m=VBjFLC7Arur",
         videoUrl: "https://res.cloudinary.com/diu3u1hm1/video/upload/v1764848252/vv-trim_gt67yc.mp4",
         amenities: [

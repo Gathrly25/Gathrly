@@ -9,7 +9,7 @@ const infiniteServices = [...services, ...services];
 
 const ServicesCarousel = () => {
   return (
-    <section className="h-screen flex flex-col justify-center bg-black relative overflow-hidden mt-0 sm:mt-2 md:mt-5">
+    <section className="h-screen flex flex-col justify-center bg-black relative overflow-hidden mt-0">
       
       {/* Background Sparkles and Stars */}
       <div className="absolute inset-0 overflow-hidden hidden sm:block">
